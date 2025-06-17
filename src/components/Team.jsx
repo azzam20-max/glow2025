@@ -4,28 +4,28 @@ export const Team = (props) => {
   return (
     <div id="team" className="text-center">
       <div className="container">
-        <div className="col-md-8 col-md-offset-2 section-title">
-          <h2>Meet the Team</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p>
-        </div>
-        <div id="row">
-          {props.data
-            ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6 team">
-                  <div className="thumbnail">
-                    {" "}
-                    <img src={d.img} alt="..." className="team-img" />
-                    <div className="caption">
-                      <h4>{d.name}</h4>
-                      <p>{d.job}</p>
+        <div className="row">
+          {/* Kiri: Judul + Deskripsi */}
+          <div className="col-md-4 section-title" style={{ textAlign: "left" }}>
+            <h2>Gallery</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
+              dapibus leonec. Mauris non tempor quam, et lacinia sapien.
+            </p>
+          </div>
+
+          {/* Kanan: Grid foto */}
+          <div className="col-md-8">
+            <div className="gallery-grid">
+              {props.data
+                ? props.data.map((d, i) => (
+                    <div key={`${d.name}-${i}`} className="gallery-item">
+                      <img src={d.img} alt={d.name} className="team-img" />
                     </div>
-                  </div>
-                </div>
-              ))
-            : "loading"}
+                  ))
+                : "loading"}
+            </div>
+          </div>
         </div>
       </div>
     </div>
