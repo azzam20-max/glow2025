@@ -1,6 +1,10 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
+import gloww from "./gloww.png";
+import psall from "./psall.png";
+import icaoo from "./icaoo.png";
+import alliancee from "./alliancee.png";
 
 const initialState = {
   name: "",
@@ -15,16 +19,22 @@ export const Contact = (props) => {
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
   const clearState = () => setState({ ...initialState });
-  
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
-    
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
+
+    {
+      /* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */
+    }
+
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        e.target,
+        "YOUR_PUBLIC_KEY"
+      )
       .then(
         (result) => {
           console.log(result.text);
@@ -42,7 +52,7 @@ export const Contact = (props) => {
           <div className="col-md-8">
             <div className="row">
               <div className="section-title">
-                <h2>Get In Touch</h2>
+                <h2>Help Center</h2>
                 <p>
                   Please fill out the form below to send us an email and we will
                   get back to you as soon as possible.
@@ -95,32 +105,36 @@ export const Contact = (props) => {
                 <button type="submit" className="btn btn-custom btn-lg">
                   Send Message
                 </button>
+                <div
+                  className="logo-grid"
+                  style={{ marginTop: "0px", marginBottom: "0px" }}
+                >
+                  <img src={alliancee} alt="Logo" className="logo left" />
+
+                  <img src={icaoo} alt="Logo B" className="logo right" />
+                  <img src={psall} alt="Logo C" className="logo left" />
+                  <img src={gloww} alt="Logo D" className="logo right" />
+                </div>
               </form>
             </div>
           </div>
           <div className="col-md-3 col-md-offset-1 contact-info">
             <div className="contact-item">
-              <h3>Contact Info</h3>
               <p>
-                <span>
-                  <i className="fa fa-map-marker"></i> Address
-                </span>
-                {props.data ? props.data.address : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-phone"></i> Phone
-                </span>{" "}
+                <i className="fa fa-phone"></i> Phone:{" "}
                 {props.data ? props.data.phone : "loading"}
               </p>
             </div>
             <div className="contact-item">
               <p>
-                <span>
-                  <i className="fa fa-envelope-o"></i> Email
-                </span>{" "}
+                <i className="fa fa-map-marker"></i> Address:{" "}
+                {props.data ? props.data.address : "loading"}
+              </p>
+            </div>
+
+            <div className="contact-item">
+              <p>
+                <i className="fa fa-envelope-o"></i> Email:{" "}
                 {props.data ? props.data.email : "loading"}
               </p>
             </div>
@@ -152,12 +166,7 @@ export const Contact = (props) => {
       </div>
       <div id="footer">
         <div className="container text-center">
-          <p>
-            &copy; 2023 Issaaf Kattan React Land Page Template. Design by{" "}
-            <a href="http://www.templatewire.com" rel="nofollow">
-              TemplateWire
-            </a>
-          </p>
+          <p>&copy; 2025 ICAO.</p>
         </div>
       </div>
     </div>
