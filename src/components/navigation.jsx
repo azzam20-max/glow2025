@@ -1,6 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export const Navigation = (props) => {
+  const [activeSection, setActiveSection] = useState("#about");
+
+  const handleSetActive = (hash) => {
+    setActiveSection(hash);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        "#about",
+        "#portfolio",
+        "#testimonials",
+        "#team",
+        "#contact",
+      ];
+      let current = "#about";
+      sections.forEach((sec) => {
+        const el = document.querySelector(sec);
+        if (el) {
+          const offsetTop = el.offsetTop;
+          if (window.pageYOffset >= offsetTop - 60) {
+            current = sec;
+          }
+        }
+      });
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -27,38 +59,48 @@ export const Navigation = (props) => {
           id="bs-example-navbar-collapse-1"
         >
           <ul className="nav navbar-nav navbar-right">
-            <li>
-              {/* <a href="#features" className="page-scroll">
-                Features
-              </a> */}
-            </li>
-            <li>
-              <a href="#about" className="page-scroll">
+            <li className={activeSection === "#about" ? "active" : ""}>
+              <a
+                href="#about"
+                className="page-scroll"
+                onClick={() => handleSetActive("#about")}
+              >
                 About
               </a>
             </li>
-            <li>
-              {/* <a href="#services" className="page-scroll">
-                Services
-              </a> */}
-            </li>
-            <li>
-              <a href="#portfolio" className="page-scroll">
+            <li className={activeSection === "#portfolio" ? "active" : ""}>
+              <a
+                href="#portfolio"
+                className="page-scroll"
+                onClick={() => handleSetActive("#portfolio")}
+              >
                 Schedule
               </a>
             </li>
-            <li>
-              <a href="#testimonials" className="page-scroll">
+            <li className={activeSection === "#testimonials" ? "active" : ""}>
+              <a
+                href="#testimonials"
+                className="page-scroll"
+                onClick={() => handleSetActive("#testimonials")}
+              >
                 Speakers
               </a>
             </li>
-            <li>
-              <a href="#team" className="page-scroll">
+            <li className={activeSection === "#team-gallery" ? "active" : ""}>
+              <a
+                href="#team-gallery"
+                className="page-scroll"
+                onClick={() => handleSetActive("#team-gallery")}
+              >
                 Gallery
               </a>
             </li>
-            <li>
-              <a href="#contact" className="page-scroll">
+            <li className={activeSection === "#contact" ? "active" : ""}>
+              <a
+                href="#contact"
+                className="page-scroll"
+                onClick={() => handleSetActive("#contact")}
+              >
                 Contact
               </a>
             </li>
