@@ -6,11 +6,9 @@
   scroll-behavior: smooth;
 }
 
-
-
 /* Navbar */
 .navbar {
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   padding: 10px 40px;
   position: sticky;
   top: 0;

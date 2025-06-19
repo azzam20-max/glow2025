@@ -1,5 +1,5 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import React from "react";
 
 const initialState = {
@@ -23,28 +23,29 @@ export const Contact = () => {
 
     emailjs
       .send(
-        "service_xxxxxx", // ganti dengan SERVICE ID kamu
-        "template_xxxxxx", // ganti dengan TEMPLATE ID kamu
+        "service_5vdw0b2",
+        "template_kqdrc98",
         {
           from_name: formState.name,
           from_email: formState.email,
           message: formState.message,
         },
-        "YOUR_PUBLIC_KEY" // ganti dengan public key (user ID/public key) dari EmailJS
+        "tEvctZEwHR9JC2Jhh"
       )
       .then(
         (result) => {
           console.log("Success:", result.text);
-          alert("Message sent successfully to icao@telkomuniversity.ac.id!");
+          alert("Message sent successfully!");
           setFormState(initialState);
         },
         (error) => {
-          console.error("Error:", error.text);
-          alert("Failed to send message, please try again.");
+          console.error("EmailJS Error:", error);
+          alert("Failed to send message. Check console and keys.");
         }
       )
       .finally(() => setIsSubmitting(false));
   };
+
   // 📝 Langkah EmailJS
   // 1️⃣ Buat akun EmailJS di https://www.emailjs.com/
   // 2️⃣ Buat service (ex: Gmail)

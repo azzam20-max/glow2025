@@ -95,7 +95,7 @@
   line-height: 1.6;
   margin-bottom: 15px;
   color: #555;
-  text-align: left;
+  text-align: justify; /* 🔑 Ubah ke justify */
 }
 
 .event-image {
@@ -135,9 +135,11 @@
 
   .event-text h2 {
     font-size: 28px;
+    text-align: justify; /* 🔑 Ubah ke justify */
   }
 
   .event-text p {
     font-size: 16px;
+    text-align: justify; /* 🔑 Ubah ke justify */
   }
 }

@@ -438,7 +438,6 @@ header .intro-text {
 }
 
 .testimonial-image {
-  background: whitesmoke;
   padding: 4px;
   display: inline-block;
   border-radius: 50%;
@@ -535,7 +534,7 @@ header .intro-text {
 }
 
 .gallery-description {
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.8;
   color: #475569;
   text-align: justify;
@@ -654,7 +653,7 @@ header .intro-text {
 }
 
 .contact-description {
-  font-size: 1.125rem;
+  font-size: 13px;
   color: #6b7280;
   max-width: 32rem;
   margin: 0 auto;
@@ -685,7 +684,7 @@ header .intro-text {
 }
 
 .partner-logo {
-  height: 3rem;
+  height: 4rem;
   width: auto;
 }
 
@@ -731,7 +730,7 @@ header .intro-text {
 }
 
 .form-label {
-  font-size: 0.875rem;
+  font-size: 15px;
   font-weight: 500;
   color: #374151;
 }
@@ -744,7 +743,7 @@ header .intro-text {
   border: 1px solid #d1d5db;
   background: white;
   padding: 0 0.75rem;
-  font-size: 1rem;
+  font-size: 12px;
   transition: all 0.3s ease;
 }
 
@@ -769,7 +768,7 @@ header .intro-text {
   font-weight: 600;
   border: none;
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
@@ -866,14 +865,14 @@ header .intro-text {
 }
 
 .contact-title-small {
-  font-size: 1.125rem;
+  font-size: 12px;
   font-weight: 600;
   color: #1f2937;
   margin: 0 0 0.5rem 0;
 }
 
 .contact-text {
-  font-size: 0.875rem;
+  font-size: 10px;
   color: #6b7280;
   margin: 0;
   line-height: 1.5;
