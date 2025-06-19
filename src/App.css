@@ -1,18 +1,14 @@
 @media screen and (max-width: 400px) {
-  #features {
-    padding: 20px;
-    width: 111%;
-  }
+  #features,
   #about,
   #services,
   #testimonials,
   #team,
   #contact,
-  #footer {
-    width: 111%;
-  }
-
+  #footer,
   #portfolio {
-    width: 110%;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* penting agar padding tidak membuat lebar lebih dari 100% */
   }
 }

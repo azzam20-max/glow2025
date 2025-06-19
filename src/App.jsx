@@ -10,12 +10,19 @@ import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
+
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import EventSection from './components/EventSection'; // Uncomment if you want to use EventSection
+import ScheduleSection from './components/ScheduleSection'; // Uncomment if you want to use ScheduleSection 
+
+
 import "./App.css";
 
-export const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
-  speedAsDuration: true,
-});
+// export const scroll = new SmoothScroll('a[href*="#"]', {
+//   speed: 1000,
+//   speedAsDuration: true,
+// });
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
@@ -25,12 +32,11 @@ const App = () => {
 
   return (
     <div>
-      <Navigation />
-      <Header data={landingPageData.Header} />
-      {/* <Features data={landingPageData.Features} /> */}
-      <About data={landingPageData.About} />
-      {/* <Services data={landingPageData.Services} /> */}
-      <Gallery data={landingPageData.Gallery} />
+      <Navbar />
+      <Hero />
+      <EventSection />
+      <ScheduleSection />
+      
       <Testimonials data={landingPageData.Testimonials} />
       <Team data={landingPageData.Team} />
       <Contact data={landingPageData.Contact} />
