@@ -67,6 +67,9 @@ hr {
 }
 /* Contact Section */
 /* Contact Component Styles */
+section {
+  scroll-margin-top: 80px; /* atau setinggi navbar kamu (misal 70-80px) */
+}
 
 .contact-wrapper {
   min-height: 100vh;

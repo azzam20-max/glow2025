@@ -1,3 +1,5 @@
+import "./Gallery.css";
+
 export const Gallery = (props) => {
   return (
     <div id="gallery">

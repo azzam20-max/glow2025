@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import "./contact.css";
 
 const initialState = {
   name: "",
