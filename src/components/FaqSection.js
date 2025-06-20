@@ -3,24 +3,24 @@ import "./FaqSection.css";
 
 const faqs = [
   {
-    question: "Apa itu acara ini?",
+    question: "What is this event about?",
     answer:
-      "Ini adalah acara seminar dan workshop teknologi yang menghadirkan pembicara dari berbagai bidang dan universitas.",
+      "This is a seminar and technology workshop event featuring speakers from various fields and universities.",
   },
   {
-    question: "Siapa saja yang bisa ikut?",
+    question: "Who can participate?",
     answer:
-      "Acara ini terbuka untuk umum, termasuk mahasiswa, dosen, dan praktisi industri.",
+      "This event is open to the public, including students, lecturers, and industry professionals.",
   },
   {
-    question: "Apakah acara ini berbayar?",
+    question: "Is there a fee to attend?",
     answer:
-      "Tidak, acara ini gratis. Namun, pendaftaran diperlukan untuk memastikan tempat tersedia.",
+      "No, the event is free. However, registration is required to ensure a spot is available.",
   },
   {
-    question: "Bagaimana cara mendaftar?",
+    question: "How do I register?",
     answer:
-      "Silakan klik tombol 'Daftar Sekarang' di halaman utama dan isi formulir pendaftaran.",
+      "Please click the 'Register Now' button on the homepage and fill out the registration form.",
   },
 ];
 
