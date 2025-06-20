@@ -5,9 +5,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   // Tutup menu jika klik di luar navbar
   useEffect(() => {
@@ -16,24 +14,33 @@ function Navbar() {
         setIsOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Scrollspy: deteksi section yang sedang tampil
+  // Scrollspy dinamis
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "schedule", "speakers", "faq", "contact"];
-      for (let id of sections) {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            break;
-          }
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-links li");
+
+      let current = "";
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom > 120) {
+          current = section.id;
         }
-      }
+      });
+
+      navLinks.forEach((li) => {
+        const link = li.querySelector("a");
+        const href = link.getAttribute("href").substring(1); // remove #
+        if (href === current) {
+          li.classList.add("active");
+        } else {
+          li.classList.remove("active");
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -49,46 +56,20 @@ function Navbar() {
           </a>
         </div>
 
-        <div
-          className={`hamburger ${isOpen ? "open" : ""}`}
-          onClick={toggleMenu}
-        >
+        <div className={`hamburger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
         </div>
 
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
-          <li>
-            <a href="#about" onClick={() => setIsOpen(false)}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#schedule" onClick={() => setIsOpen(false)}>
-              Schedule
-            </a>
-          </li>
-          <li>
-            <a href="#speakers" onClick={() => setIsOpen(false)}>
-              Speakers
-            </a>
-          </li>
-          <li>
-            <a href="#gallery" onClick={() => setIsOpen(false)}>
-              Gallery
-            </a>
-          </li>
-          <li>
-            <a href="#faq" onClick={() => setIsOpen(false)}>
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={() => setIsOpen(false)}>
-              Contact
-            </a>
-          </li>
+          {["about", "schedule", "speakers", "gallery", "faq", "contact"].map((id) => (
+            <li key={id}>
+              <a href={`#${id}`} onClick={() => setIsOpen(false)}>
+                {id.charAt(0).toUpperCase() + id.slice(1)}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

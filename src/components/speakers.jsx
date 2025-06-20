@@ -3,8 +3,8 @@ import "./speakers.css";
 
 export const Speakers = () => {
   return (
-    <div
-      id="speakers"
+    <section id="speakers"
+      
       style={{
         backgroundColor: "#0066cc",
         padding: "100px 2rem 50px 2rem", // top 100px, kanan kiri 2rem, bawah 50px
@@ -321,6 +321,6 @@ export const Speakers = () => {
           </div>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };

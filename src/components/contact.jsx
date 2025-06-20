@@ -57,7 +57,7 @@ export const Contact = () => {
 
   // 4️⃣ Salin Service ID, Template ID, dan Public Key → masukkan ke kode di atas.
   return (
-    <div id="contact" className="contact-wrapper">
+    <section id="contact" className="contact-wrapper">
       <section className="contact-section">
         <div className="contact-container">
           <div className="contact-header">
@@ -239,6 +239,6 @@ export const Contact = () => {
           <p className="footer-text">© 2025 ICAO. All rights reserved.</p>
         </div>
       </footer>
-    </div>
+    </section>
   );
 };

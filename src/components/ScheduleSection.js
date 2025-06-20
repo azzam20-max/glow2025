@@ -5,36 +5,33 @@ function ScheduleSection() {
     {
       time: "Telecommunication Engineering",
       title: "Cloud Computing",
-      description: "Participants re-register and enjoy light breakfast.",
+      image: "/img/logo-int.png"
     },
     {
       time: "Industrial Engineering, ICT Business, Accounting",
       title: "Organizational Behavior",
-      description:
-        "Presentation by the keynote speaker on future technology trends.",
+      image: "/img/logo-int.png"
     },
     {
       time: "Informatics, Information System, Electrical Engineering",
       title: "Artificial Intelligence",
-      description: "Discussion with experts from various industries.",
+      image: "/img/logo-int.png"
     },
     {
       time: "Visual Communication Design",
       title: "Introduction to Branding",
-      description:
-        "Hands-on workshop on the latest technology and digital skills.",
+      image: "/img/logo-int.png"
     },
     {
       time: "Communication Science",
       title: "International Communication",
-      description: "Selected startups present their innovative solutions.",
+      image: "/img/logo-int.png"
     },
     {
       time: "Business Administration",
       title: "Business Model",
-      description:
-        "Opportunity to network with other participants and event closing.",
-    },
+      image: "/img/logo-int.png"
+    }
   ];
 
   return (
@@ -57,7 +54,7 @@ function ScheduleSection() {
         <div className="professor-image-container">
           <img
             src="/img/second-week.jpg"
-            alt="Visiting Professor Schedule"
+            alt="Second Week Schedule"
             className="professor-image"
           />
         </div>
@@ -68,9 +65,15 @@ function ScheduleSection() {
       <div className="schedule-grid">
         {schedule.map((item, index) => (
           <div className="schedule-card" key={index}>
+            <div className="schedule-logo-container">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="schedule-logo"
+              />
+            </div>
             <div className="schedule-time">{item.time}</div>
             <h3 className="schedule-heading">{item.title}</h3>
-            <p className="schedule-description">{item.description}</p>
           </div>
         ))}
       </div>

@@ -2,7 +2,7 @@ import "./Gallery.css";
 
 export const Gallery = (props) => {
   return (
-    <div id="gallery">
+    <section id="gallery">
       <div id="team-gallery" className="container-fluid team-wrapper">
         <div className="row align-items-center">
           {/* Kiri: Judul + Deskripsi */}
@@ -68,6 +68,6 @@ export const Gallery = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
