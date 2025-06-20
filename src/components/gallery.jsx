@@ -21,12 +21,20 @@ export const Gallery = (props) => {
               </p>
               <div className="stats-grid">
                 <div className="stat-item">
-                  <span className="stat-number">150+</span>
+                  <span className="stat-number">1500+</span>
                   <span className="stat-label">International Students</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">25+</span>
+                  <span className="stat-number">30+</span>
                   <span className="stat-label">Partner Universities</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">10+</span>
+                  <span className="stat-label">Countries</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">70+</span>
+                  <span className="stat-label">Visiting Professors</span>
                 </div>
               </div>
             </div>
