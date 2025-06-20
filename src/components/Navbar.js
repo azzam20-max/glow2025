@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './Navbar.css';
+import React, { useState, useEffect, useRef } from "react";
+import "./Navbar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,19 +17,23 @@ function Navbar() {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   return (
     <nav className="navbar" ref={navRef}>
       <div className="navbar-container">
-        <div className="logo"><a href="hero"><img src="/logo.png" alt="Logo" /></a></div>
+        <div className="logo">
+          <a href="hero">
+            <img src="/logo.png" alt="Logo" />
+          </a>
+        </div>
 
         <div
-          className={`hamburger ${isOpen ? 'open' : ''}`}
+          className={`hamburger ${isOpen ? "open" : ""}`}
           onClick={toggleMenu}
         >
           <span></span>
@@ -37,12 +41,37 @@ function Navbar() {
           <span></span>
         </div>
 
-        <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-          <li><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>
-          <li><a href="#schedule" onClick={() => setIsOpen(false)}>Schedule</a></li>
-          <li><a href="#speakers" onClick={() => setIsOpen(false)}>Speakers</a></li>
-          <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
-          <li><a href="#faq" onClick={() => setIsOpen(false)}>FAQ</a></li>
+        <ul className={`nav-links ${isOpen ? "active" : ""}`}>
+          <li>
+            <a href="#about" onClick={() => setIsOpen(false)}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#schedule" onClick={() => setIsOpen(false)}>
+              Schedule
+            </a>
+          </li>
+          <li>
+            <a href="#speakers" onClick={() => setIsOpen(false)}>
+              Speakers
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" onClick={() => setIsOpen(false)}>
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a href="#faq" onClick={() => setIsOpen(false)}>
+              FAQ
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={() => setIsOpen(false)}>
+              Contact
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

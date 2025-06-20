@@ -1,7 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
+import "./speakers.css";
 
-export const Testimonials = () => {
+export const Speakers = () => {
   return (
     <div
       id="speakers"

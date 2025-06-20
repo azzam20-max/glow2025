@@ -1,38 +1,40 @@
-import React from 'react';
-import './ScheduleSection.css';
+import "./ScheduleSection.css";
 
 function ScheduleSection() {
   const schedule = [
     {
-      time: 'Telecommunication Engineering',
-      title: 'Cloud Computing',
-      description: 'Peserta melakukan registrasi ulang dan menikmati sarapan ringan.'
+      time: "Telecommunication Engineering",
+      title: "Cloud Computing",
+      description: "Participants re-register and enjoy light breakfast.",
     },
     {
-      time: 'Industrial Engineering, ICT Business, Accounting',
-      title: 'Organizational Behavior',
-      description: 'Pemaparan oleh pembicara utama tentang tren teknologi masa depan.'
+      time: "Industrial Engineering, ICT Business, Accounting",
+      title: "Organizational Behavior",
+      description:
+        "Presentation by the keynote speaker on future technology trends.",
     },
     {
-      time: 'Informatics, Information System, Electrical Engineering',
-      title: 'Artificial Intelligent',
-      description: 'Diskusi bersama para ahli dari berbagai industri.'
+      time: "Informatics, Information System, Electrical Engineering",
+      title: "Artificial Intelligence",
+      description: "Discussion with experts from various industries.",
     },
     {
-      time: 'Visual Communication Design',
-      title: 'Introduction to Branding',
-      description: 'Workshop praktis mengenai teknologi terbaru dan keterampilan digital.'
+      time: "Visual Communication Design",
+      title: "Introduction to Branding",
+      description:
+        "Hands-on workshop on the latest technology and digital skills.",
     },
     {
-      time: 'Communication Science',
-      title: 'International Communication',
-      description: 'Beberapa startup terpilih mempresentasikan solusi inovatif mereka.'
+      time: "Communication Science",
+      title: "International Communication",
+      description: "Selected startups present their innovative solutions.",
     },
     {
-      time: 'Administration Business',
-      title: 'Business Model',
-      description: 'Kesempatan untuk berjejaring dengan peserta lain dan penutupan acara.'
-    }
+      time: "Business Administration",
+      title: "Business Model",
+      description:
+        "Opportunity to network with other participants and event closing.",
+    },
   ];
 
   return (
@@ -60,7 +62,6 @@ function ScheduleSection() {
           />
         </div>
       </div>
-
 
       <h2 className="schedule-title">GLOW COURSES</h2>
 

@@ -1,0 +1,127 @@
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: #777;
+  font-weight: 400;
+  width: 100% !important;
+  height: 100% !important;
+}
+h2,
+h3,
+h4 {
+  font-family: "Raleway", sans-serif;
+}
+h2 {
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  font-weight: 800;
+  font-size: 36px;
+  color: #333;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+h4 {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 20px;
+}
+p {
+  font-size: 15px;
+}
+p.intro {
+  margin: 12px 0 0;
+  line-height: 24px;
+}
+a {
+  color: #608dfd;
+  font-weight: 400;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #608dfd;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+hr {
+  height: 2px;
+  width: 70px;
+  text-align: center;
+  position: relative;
+  background: #1e7a46;
+  margin-bottom: 20px;
+  border: 0;
+}
+/* Navigation */
+
+/* Testimonials Section */
+#team-gallery {
+  padding-top: 90px; /* Lebih tinggi dari navbar supaya aman */
+}
+
+#testimonials {
+  background: #0066cc; /* Biru solid */
+  padding: 80px 0;
+  color: #fff;
+  padding-top: 90px; /* Lebih tinggi dari navbar supaya aman */
+}
+
+.section-title h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.testimonial {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial-image {
+  padding: 4px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid #ffa500;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* opsional biar menonjol */
+}
+
+.testimonial img {
+  width: 100px; /* Ukuran lebih kecil */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  background: whitesmoke;
+}
+
+.testimonial-meta {
+  font-weight: 700;
+  color: #ffa500; /* Orange keemasan (atau bisa #FFC107 kalau mau lebih kuning) */
+  margin-top: 8px;
+}
+.testimonial-desc {
+  margin: 0px 0 0 0; /* Jarak kecil di atas */
+  color: #ffffff; /* Putih */
+}
+
+.testimonial p {
+  font-size: 14px;
+  color: #ffffff; /* Putih */
+  margin-top: 4px;
+}
