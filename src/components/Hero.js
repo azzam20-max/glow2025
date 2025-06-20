@@ -4,19 +4,18 @@ import './Hero.css';
 function Hero() {
   return (
     <section className="hero" id="hero">
-      <header className="hero-header">
-        {/* Animasi bendera ASEAN di header */}
-        <div className="flag-marquee">
-          <div className="flag-wrapper">
-            <img src="/flags/id.png" alt="Indonesia" className="flag-item" />
-            <img src="/flags/my.png" alt="Malaysia" className="flag-item" />
-            <img src="/flags/sg.png" alt="Singapura" className="flag-item" />
-            <img src="/flags/th.png" alt="Thailand" className="flag-item" />
-            <img src="/flags/ph.png" alt="Filipina" className="flag-item" />
-            <img src="/flags/vn.png" alt="Vietnam" className="flag-item" />
-          </div>
-        </div>
-      </header>
+      {/* Animasi bendera ASEAN */}
+    <div className="flag-marquee">
+      <div className="flag-wrapper">
+        <img src="/flags/id.png" alt="Indonesia" className="flag-item" />
+        <img src="/flags/my.png" alt="Malaysia" className="flag-item" />
+        <img src="/flags/sg.png" alt="Singapura" className="flag-item" />
+        <img src="/flags/th.png" alt="Thailand" className="flag-item" />
+        <img src="/flags/ph.png" alt="Filipina" className="flag-item" />
+        <img src="/flags/vn.png" alt="Vietnam" className="flag-item" />
+      </div>
+    </div>
+
 
       <div className="hero-overlay">
         <div className="hero-container">
