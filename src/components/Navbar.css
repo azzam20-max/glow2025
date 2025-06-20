@@ -5,6 +5,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+section {
+  scroll-margin-top: 80px; /* atur sesuai tinggi navbar */
+}
 
 /* Navbar Container */
 .navbar {
@@ -103,6 +106,7 @@
 @media screen and (max-width: 768px) {
   .logo img {
     height: 40px;
+    width: auto;
   }
 
   .nav-links {
@@ -115,6 +119,7 @@
     align-items: center;
     display: none;
     padding: 20px 0;
+    z-index: 101;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
