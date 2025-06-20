@@ -1,326 +1,158 @@
+"use client";
+import PropTypes from "prop-types";
+
 import { motion } from "framer-motion";
 import "./speakers.css";
 
+const speakers = [
+  {
+    name: "Prof. Yoshihiro Mizoguchi",
+    affiliation: "Kyushu University, Japan",
+    image: "/img/speakers/yoshihiro.png",
+  },
+  {
+    name: "Assoc. Prof. Dr. Sheela Bhargava",
+    affiliation: "Lal Bahadur Shastri Institute of Management, India",
+    image: "/img/speakers/sheela.png",
+  },
+  {
+    name: "Prof. Kenneth Chi Ho Kim",
+    affiliation: "Hanyang University ERICA, South Korea",
+    image: "/img/speakers/kenneth.png",
+  },
+  {
+    name: "Dr. Low Jing Hong",
+    affiliation: "Multimedia University (MMU), Malaysia",
+    image: "/img/speakers/lowjing.png",
+  },
+  {
+    name: "Ts. Puan Rajina Binti M A Raj Mohamed",
+    affiliation: "Universiti Tenaga Nasional (UNITEN), Malaysia",
+    image: "/img/speakers/puan.png",
+  },
+  {
+    name: "Dr. Mohd Nur Ruzainy Bin Alwi",
+    affiliation: "Universiti Tenaga Nasional (UNITEN), Malaysia",
+    image: "/img/speakers/mohd.png",
+  },
+];
+
+const collaborators = [
+  {
+    name: "Suryo Adhi Wibowo, S.T., M.T., Ph.D.",
+    affiliation: "Co-Lecturers of GLOW, Telecommunication Engineering",
+    image: "/img/speakers/suryo.c.png",
+  },
+  {
+    name: "Taufik Nur Adi Ph.D.",
+    affiliation: "Co-Lecturers of GLOW, Information System",
+    image: "/img/speakers/taufik.c.png",
+  },
+  {
+    name: "Dr. Edward Ferdian, S.T., B.Sc., M.Sc.",
+    affiliation: "Co-Lecturers of GLOW, Informatics",
+    image: "/img/speakers/edward.c.png",
+  },
+  {
+    name: "Heru Syah Putra, S.Kom., M.Sc.Eng.",
+    affiliation: "Co-Lecturers of GLOW, Electrical Engineering",
+    image: "/img/speakers/heru.c.png",
+  },
+  {
+    name: "Dr. Fida Nirmala Nugraha, S. Psi., M.Psi.",
+    affiliation: "Co-Lecturers of GLOW, Industrial Engineering",
+    image: "/img/speakers/fida.c.png",
+  },
+  {
+    name: "Dr. Fetty Poerwita Sary, S.S., M.Pd.",
+    affiliation: "Co-Lecturers of GLOW, ICT Business",
+    image: "/img/speakers/fetty.c.png",
+  },
+  {
+    name: "Dwi Urip Wardoyo, S.E., M.M.Si",
+    affiliation: "Co-Lecturers of GLOW, Accounting",
+    image: "/img/speakers/dwi.c.png",
+  },
+  {
+    name: "Dr. Maria Josef Retno Budi Wahyuni, M.Ds",
+    affiliation: "Co-Lecturers of GLOW, Visual Communication Design",
+    image: "/img/speakers/maria.c.png",
+  },
+  {
+    name: "Diah Agung Esfandari, B.A., M.Si.",
+    affiliation: "Co-Lecturers of GLOW, Communication Science",
+    image: "/img/speakers/diah.c.png",
+  },
+  {
+    name: "Ihsan Hadiansah, SE, BIBM, MSM.",
+    affiliation: "Co-Lecturers of GLOW, Business Administration",
+    image: "/img/speakers/ihsan.c.png",
+  },
+  {
+    name: "Fikri Mohamad Rizaldi, B.B.A., M.A.B.",
+    affiliation: "Co-Lecturers of GLOW, Business Administration",
+    image: "/img/speakers/fikri.png",
+  },
+];
+
+const PersonCard = ({ person, index }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="speaker-card"
+    >
+      <div className="speaker-card-inner">
+        <div className="speaker-image-container">
+          <img
+            src={person.image || "/placeholder.svg"}
+            alt={person.name}
+            className="speaker-image"
+          />
+        </div>
+
+        <h3 className="speaker-name">{person.name}</h3>
+        <p className="speaker-affiliation">{person.affiliation}</p>
+      </div>
+    </motion.div>
+  );
+};
+
 export const Speakers = () => {
   return (
-    <section id="speakers"
-      
-      style={{
-        backgroundColor: "#0066cc",
-        padding: "100px 2rem 50px 2rem", // top 100px, kanan kiri 2rem, bawah 50px
-        scrollMarginTop: "100px",
-      }}
-    >
-      <div
-        className="container"
-        style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
-      >
-        <div className="section-title text-center">
-          <motion.h2
-            style={{ color: "#fff" }}
-            whileHover={{
-              scale: 1.1,
-              textShadow: "0px 0px 8px rgba(255, 255, 255, 0.8)",
-            }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Speakers and Collaborators
-          </motion.h2>
+    <section id="speakers" className="speakers-section">
+      <div className="speakers-container">
+        <div className="section-header">
+          <h2>Speakers and Collaborators</h2>
+          <div className="section-divider"></div>
         </div>
 
-        {/* LINE 1: 6 Speakers */}
-        <motion.div
-          className="row"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="col-md-2 col-sm-4 col-xs-6">
-            <div className="testimonial">
-              <div className="testimonial-image">
-                <img
-                  src="/img/speakers/yoshihiro.png"
-                  alt="Speaker 1"
-                  className="img-responsive"
-                />
-              </div>
-              <div className="testimonial-meta">Prof. Yoshihiro Mizoguchi</div>
-              <p className="testimonial-desc">Kyushu University, Japan</p>
+        <div className="speakers-content">
+          <div className="speakers-group">
+            <h3 className="group-title">International Speakers</h3>
+            <div className="speakers-grid">
+              {speakers.map((speaker, index) => (
+                <PersonCard key={index} person={speaker} index={index} />
+              ))}
             </div>
           </div>
 
-          <div className="col-md-2 col-sm-4 col-xs-6">
-            <div className="testimonial">
-              <div className="testimonial-image">
-                <img
-                  src="/img/speakers/sheela.png"
-                  alt="Speaker 2"
-                  className="img-responsive"
-                />
-              </div>
-              <div className="testimonial-meta">
-                Assoc. Prof. Dr. Sheela Bhargava
-              </div>
-              <p className="testimonial-desc">
-                Lal Bahadur Shastri Institute of Management, India
-              </p>
+          <div className="speakers-group">
+            <h3 className="group-title">Local Collaborators</h3>
+            <div className="speakers-grid">
+              {collaborators.map((collaborator, index) => (
+                <PersonCard key={index} person={collaborator} index={index} />
+              ))}
             </div>
           </div>
-
-          <div className="col-md-2 col-sm-4 col-xs-6">
-            <div className="testimonial">
-              <div className="testimonial-image">
-                <img
-                  src="/img/speakers/kenneth.png"
-                  alt="Speaker 3"
-                  className="img-responsive"
-                />
-              </div>
-              <div className="testimonial-meta">Prof. Kenneth Chi Ho Kim</div>
-              <p className="testimonial-desc">
-                Hanyang University ERICA, South Korea
-              </p>
-            </div>
-          </div>
-
-          <div className="col-md-2 col-sm-4 col-xs-6">
-            <div className="testimonial">
-              <div className="testimonial-image">
-                <img
-                  src="/img/speakers/lowjing.png"
-                  alt="Speaker 4"
-                  className="img-responsive"
-                />
-              </div>
-              <div className="testimonial-meta">Dr. Low Jing Hong</div>
-              <p className="testimonial-desc">
-                Multimedia University (MMU), Malaysia
-              </p>
-            </div>
-          </div>
-
-          <div className="col-md-2 col-sm-4 col-xs-6">
-            <div className="testimonial">
-              <div className="testimonial-image">
-                <img
-                  src="/img/speakers/puan.png"
-                  alt="Speaker 5"
-                  className="img-responsive"
-                />
-              </div>
-              <div className="testimonial-meta">
-                Ts. Puan Rajina Binti M A Raj Mohamed
-              </div>
-              <p className="testimonial-desc">
-                Universiti Tenaga Nasional (UNITEN), Malaysia
-              </p>
-            </div>
-          </div>
-
-          <div className="col-md-2 col-sm-4 col-xs-6">
-            <div className="testimonial">
-              <div className="testimonial-image">
-                <img
-                  src="/img/speakers/mohd.png"
-                  alt="Speaker 6"
-                  className="img-responsive"
-                />
-              </div>
-              <div className="testimonial-meta">
-                Dr. Mohd Nur Ruzainy Bin Alwi
-              </div>
-              <p className="testimonial-desc">
-                Universiti Tenaga Nasional (UNITEN), Malaysia
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        </div>
       </div>
-      {/* LINE 2: 6 Collaborators */}
-      <motion.div
-        className="row"
-        style={{ marginTop: "30px" }}
-        initial={{ opacity: 0, rotate: -5 }}
-        whileInView={{ opacity: 1, rotate: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/suryo.c.png"
-                alt="Collaborator 1"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">
-              Suryo Adhi Wibowo, S.T., M.T., Ph.D.
-            </div>
-            <p>Co-Lecturers of GLOW, Telecommunication Engineering</p>
-          </div>
-        </div>
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/taufik.c.png"
-                alt="Collaborator 2"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">Taufik Nur Adi Ph.D.</div>
-            <p>Co-Lecturers of GLOW, Information System</p>
-          </div>
-        </div>
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/edward.c.png"
-                alt="Collaborator 3"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">
-              Dr. Edward Ferdian, S.T., B.Sc., M.Sc.
-            </div>
-            <p>Co-Lecturers of GLOW, Informatics</p>
-          </div>
-        </div>
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/heru.c.png"
-                alt="Collaborator 4"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">
-              Heru Syah Putra, S.Kom., M.Sc.Eng.
-            </div>
-            <p>Co-Lecturers of GLOW, Electrical Engineering</p>
-          </div>
-        </div>
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/fida.c.png"
-                alt="Collaborator 5"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">
-              Dr. Fida Nirmala Nugraha, S. Psi., M.Psi.
-            </div>
-            <p>Co-Lecturers of GLOW, Industrial Engineering</p>
-          </div>
-        </div>
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/fetty.c.png"
-                alt="Collaborator 6"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">
-              Dr. Fetty Poerwita Sary, S.S., M.Pd.
-            </div>
-            <p>Co-Lecturers of GLOW, ICT Business</p>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* LINE 3: 5 Collaborators */}
-      <motion.div
-        className="row"
-        style={{ marginTop: "30px" }}
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/dwi.c.png"
-                alt="Collaborator 7"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">
-              Dwi Urip Wardoyo, S.E., M.M.Si
-            </div>
-            <p>Co-Lecturers of GLOW, Accounting</p>
-          </div>
-        </div>
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/maria.c.png"
-                alt="Collaborator 8"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">
-              Dr. Maria Josef Retno Budi Wahyuni, M.Ds
-            </div>
-            <p>Co-Lecturers of GLOW, Visual Communication Design</p>
-          </div>
-        </div>
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/diah.c.png"
-                alt="Collaborator 9"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">
-              Diah Agung Esfandari, B.A., M.Si.
-            </div>
-            <p>Co-Lecturers of GLOW, Communication Science</p>
-          </div>
-        </div>
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/ihsan.c.png"
-                alt="Collaborator 10"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">
-              Ihsan Hadiansah, SE, BIBM, MSM.
-            </div>
-            <p>Co-Lecturers of GLOW, Business Administration</p>
-          </div>
-        </div>
-        <div className="col-md-2 col-sm-4 col-xs-6">
-          <div className="testimonial">
-            <div className="testimonial-image">
-              <img
-                src="/img/speakers/fikri.png"
-                alt="Collaborator 11"
-                className="img-responsive"
-              />
-            </div>
-            <div className="testimonial-meta">
-              Fikri Mohamad Rizaldi, B.B.A., M.A.B.
-            </div>
-            <p>Co-Lecturers of GLOW, Business Administration</p>
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
+};
+PersonCard.propTypes = {
+  person: PropTypes.any.isRequired,
+  index: PropTypes.number.isRequired,
 };
