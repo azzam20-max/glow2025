@@ -1,0 +1,34 @@
+.credit-section {
+  background-color: #1e1e2f;
+  padding: 30px 20px;
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.credit-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.credit-container a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.credit-container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive spacing */
+@media screen and (max-width: 768px) {
+  .credit-section {
+    padding: 20px 16px;
+  }
+
+  .credit-container {
+    font-size: 13px;
+  }
+}

@@ -3,34 +3,34 @@ import "./ScheduleSection.css";
 function ScheduleSection() {
   const schedule = [
     {
-      time: "Telecommunication Engineering",
-      title: "Cloud Computing",
-      image: "/img/logo-int.png"
+      time: "Cloud Computing",
+      title: "Telecommunication Engineering",
+      image: "/img/cloud-server.png"
     },
     {
-      time: "Industrial Engineering, ICT Business, Accounting",
-      title: "Organizational Behavior",
-      image: "/img/logo-int.png"
+      time: "Organizational Behavior",
+      title: "Industrial Engineering, ICT Business, Accounting",
+      image: "/img/hierarchy.png"
     },
     {
-      time: "Informatics, Information System, Electrical Engineering",
-      title: "Artificial Intelligence",
-      image: "/img/logo-int.png"
+      time: "Artificial Intelligence",
+      title: "Informatics, Information System, Electrical Engineering",
+      image: "/img/artificial-intelligence.png"
     },
     {
-      time: "Visual Communication Design",
-      title: "Introduction to Branding",
-      image: "/img/logo-int.png"
+      time: "Introduction to Branding",
+      title: "Visual Communication Design",
+      image: "/img/package.png"
     },
     {
-      time: "Communication Science",
-      title: "International Communication",
-      image: "/img/logo-int.png"
+      time: "International Communication",
+      title: "Communication Science",
+      image: "/img/podium.png"
     },
     {
-      time: "Business Administration",
-      title: "Business Model",
-      image: "/img/logo-int.png"
+      time: "Business Model",
+      title: "Business Administration",
+      image: "/img/business.png"
     }
   ];
 

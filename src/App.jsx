@@ -10,6 +10,7 @@ import Hero from "./components/Hero";
 import EventSection from "./components/EventSection";
 import ScheduleSection from "./components/ScheduleSection";
 import FaqSection from "./components/FaqSection";
+import Credit from "./components/Credit";
 
 import "./App.css";
 
@@ -30,6 +31,7 @@ const App = () => {
       <Gallery data={landingPageData.Gallery} />
       <FaqSection />
       <Contact data={landingPageData.Contact} />
+      <Credit />
     </div>
   );
 };
