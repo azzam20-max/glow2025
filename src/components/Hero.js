@@ -5,26 +5,28 @@ function Hero() {
   return (
     <section className="hero" id="hero">
       {/* Animasi bendera ASEAN */}
-    <div className="flag-marquee">
-      <div className="flag-wrapper">
-        <img src="/flags/id.png" alt="Indonesia" className="flag-item" />
-        <img src="/flags/my.png" alt="Malaysia" className="flag-item" />
-        <img src="/flags/sg.png" alt="Singapura" className="flag-item" />
-        <img src="/flags/th.png" alt="Thailand" className="flag-item" />
-        <img src="/flags/ph.png" alt="Filipina" className="flag-item" />
-        <img src="/flags/vn.png" alt="Vietnam" className="flag-item" />
+      <div className="flag-marquee">
+        <div className="flag-wrapper">
+          <img src="/flags/id.png" alt="Indonesia" className="flag-item" />
+          <img src="/flags/my.png" alt="Malaysia" className="flag-item" />
+          <img src="/flags/sg.png" alt="Singapura" className="flag-item" />
+          <img src="/flags/th.png" alt="Thailand" className="flag-item" />
+          <img src="/flags/ph.png" alt="Filipina" className="flag-item" />
+          <img src="/flags/vn.png" alt="Vietnam" className="flag-item" />
+        </div>
       </div>
-    </div>
-
 
       <div className="hero-overlay">
         <div className="hero-container">
           <div className="hero-text">
             <h1>GLOW 2025</h1>
             <h2>Global Learning Week</h2>
-            <p>
-              7 - 18 July 2025 - Telkom University
-            </p>
+            <p>7 - 18 July 2025 - Telkom University</p>
+
+            
+            <a href="/participants" className="hero-button">
+              List of Participants
+            </a>
           </div>
 
           <div className="hero-video">

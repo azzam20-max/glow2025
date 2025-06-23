@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { Speakers } from "./components/speakers";
 import { Gallery } from "./components/gallery";
@@ -11,6 +12,8 @@ import EventSection from "./components/EventSection";
 import ScheduleSection from "./components/ScheduleSection";
 import FaqSection from "./components/FaqSection";
 import Credit from "./components/Credit";
+import Announcement from "./components/Announcement";
+import Participants from "./components/Participants"; // <- Tambahkan ini
 
 import "./App.css";
 
@@ -22,17 +25,31 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Hero />
-      <EventSection />
-      <ScheduleSection />
-      <Speakers data={landingPageData.Speakers} />
-      <Gallery data={landingPageData.Gallery} />
-      <FaqSection />
-      <Contact data={landingPageData.Contact} />
-      <Credit />
-    </div>
+      <Routes>
+        {/* Halaman utama */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <Announcement />
+              <EventSection />
+              <ScheduleSection />
+              <Speakers data={landingPageData.Speakers} />
+              <Gallery data={landingPageData.Gallery} />
+              <FaqSection />
+              <Contact data={landingPageData.Contact} />
+              <Credit />
+            </>
+          }
+        />
+
+        {/* Halaman /participants */}
+        <Route path="/participants" element={<Participants />} />
+      </Routes>
+    </Router>
   );
 };
 

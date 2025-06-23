@@ -51,7 +51,7 @@ function Navbar() {
     <nav className="navbar" ref={navRef}>
       <div className="navbar-container">
         <div className="logo">
-          <a href="#hero">
+          <a href="/#hero">
             <img src="/logo.png" alt="Logo" />
           </a>
         </div>
@@ -65,7 +65,7 @@ function Navbar() {
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
           {["about", "schedule", "speakers", "gallery", "faq", "contact"].map((id) => (
             <li key={id}>
-              <a href={`#${id}`} onClick={() => setIsOpen(false)}>
+              <a href={`/#${id}`} onClick={() => setIsOpen(false)}>
                 {id.charAt(0).toUpperCase() + id.slice(1)}
               </a>
             </li>
