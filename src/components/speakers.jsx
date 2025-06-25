@@ -93,6 +93,21 @@ const collaborators = [
     affiliation: "Co-Lecturers of GLOW, Business Administration",
     image: "/img/speakers/fikri.png",
   },
+  {
+    name: "Nur Ichsan Utama, S.T., M.T., Ph.D.",
+    affiliation: "Co-Lecturers of GLOW, Information System",
+    image: "/img/speakers/nur.png",
+  },
+  {
+    name: "Syfa Nur Lathifah, S.Kom, M.T.",
+    affiliation: "Co-Lecturers of GLOW, Information System",
+    image: "/img/speakers/syfa.png",
+  },
+  {
+    name: " Iqbal Yulizar Mukti, S.Si., M.T., Ph.D.",
+    affiliation: "Co-Lecturers of GLOW, Information System",
+    image: "/img/speakers/iqbal.png",
+  },
 ];
 
 const PersonCard = ({ person, index }) => {
