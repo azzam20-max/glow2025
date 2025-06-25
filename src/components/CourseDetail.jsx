@@ -12,7 +12,7 @@ const courseData = [
       "This course introduces cloud infrastructure, services (IaaS, PaaS, SaaS), virtualization, and practical implementations such as AWS, Azure, and GCP.",
     image: "/img/cloud-server.png",
     excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20CC%20Prodi%20Telekomunikasi'!I6&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
-    excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=P59abo&nav=MTVfezJCNjZCQjNFLTkyMDYtNDlGRS04NUQxLTg2RjlGMzMxMjdGNH0"
+    excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=v7GNO0&nav=MTVfezA0NUVFRDZDLTVCNTAtNDE5RC05Qzg2LUMzNDE5MUU2QzYyQn0"
   },
   {
     slug: "organizational-behavior",
