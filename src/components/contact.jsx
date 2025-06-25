@@ -189,15 +189,16 @@ export const Contact = () => {
                 <div className="contact-item address-item">
                   <div className="contact-icon">📍</div>
                   <div className="contact-content">
-                    <h3 className="contact-title-small">Address</h3>
+                    <h3 className="contact-title-small">
+                      Address of International Class Academic Office (ICAO)
+                    </h3>
                     <p className="contact-text">
                       <a
                         href="https://g.co/kgs/LF3k4kB"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Jl. Telekomunikasi No.1, Sukapura, Dayeuhkolot, Bandung,
-                        40257
+                        Tokong Nanas Building 9 Floor, Telkom University
                       </a>
                     </p>
                   </div>
