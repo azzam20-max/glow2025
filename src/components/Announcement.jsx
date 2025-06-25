@@ -7,20 +7,21 @@ function Announcement() {
       <div className="announcement-container">
         <h2>📘 Program Book</h2>
         <p className="announcement-text">
-          Explore the complete program schedule, speaker profiles, and all essential information for GLOW 2025.
+          Explore the full schedule, speakers, and essential information of GLOW 2025 in our official program book.
         </p>
 
-        <div className="canva-preview">
-          {/* Ganti link src dengan link embed Canva kamu */}
-          <iframe
-            title="Program Book"
-            src="https://www.canva.com/design/DAGpYLwbOlI/a-jJ5H7mYker4hNOQqBcNQ/edit/" 
-            width="100%"
-            height="600"
-            allow="fullscreen"
-            frameBorder="0"
-          ></iframe>
+        <div className="announcement-warning">
+          <strong>⚠️ Attention:</strong> All participants are <u>required</u> to read the Program Book before attending the event.
         </div>
+
+        <a
+          href="https://www.canva.com/design/DAGpYLwbOlI/vydAXYOCXGZCyhPzrdM3OA/view"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="announcement-button"
+        >
+          📖 View Program Book
+        </a>
       </div>
     </section>
   );
