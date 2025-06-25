@@ -7,23 +7,23 @@ function Participants() {
       <div className="participants-container">
         <h2 className="participants-heading">List of Participants</h2>
         <p className="participants-subtext">
-          Below is the live participant list embedded from Google Sheets.
+          Open the spreadsheet below to view the list of participants for the event.
         </p>
 
-        <div className="spreadsheet-wrapper">
+        {/* <div className="spreadsheet-wrapper">
           <iframe
-            src="https://docs.google.com/spreadsheets/d/1uwhJ-vsKm1hUZv6llNVXdl6mILl3y04g/edit?usp=sharing&ouid=105908272783749210970&rtpof=true&sd=true/pubhtml?widget=true&headers=false"
+            src="https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EVbtriVsiLhDlj9kcjCUyZQBUj4oYt7i7ndYdlQ5qxNTsw?e=8yZ3q6"
             title="Participants Spreadsheet"
             width="100%"
             height="900"
             frameBorder="0"
             allowFullScreen
           ></iframe>
-        </div>
+        </div> */}
 
         <div className="spreadsheet-button">
           <a
-            href="https://docs.google.com/spreadsheets/d/1uwhJ-vsKm1hUZv6llNVXdl6mILl3y04g/edit?usp=sharing"
+            href="https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EVbtriVsiLhDlj9kcjCUyZQBUj4oYt7i7ndYdlQ5qxNTsw?e=8yZ3q6"
             target="_blank"
             rel="noopener noreferrer"
             className="open-btn"

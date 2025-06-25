@@ -63,7 +63,7 @@ function Navbar() {
         </div>
 
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
-          {["about", "schedule", "speakers", "gallery", "faq", "contact"].map((id) => (
+          {["about", "schedule", "speakers", "gallery", "contact"].map((id) => (
             <li key={id}>
               <a href={`/#${id}`} onClick={() => setIsOpen(false)}>
                 {id.charAt(0).toUpperCase() + id.slice(1)}

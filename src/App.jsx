@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import EventSection from "./components/EventSection";
 import ScheduleSection from "./components/ScheduleSection";
-import FaqSection from "./components/FaqSection";
+
 import Credit from "./components/Credit";
 import Announcement from "./components/Announcement";
 import Participants from "./components/Participants"; // <- Tambahkan ini
@@ -39,7 +39,7 @@ const App = () => {
               <ScheduleSection />
               <Speakers data={landingPageData.Speakers} />
               <Gallery data={landingPageData.Gallery} />
-              <FaqSection />
+              
               <Contact data={landingPageData.Contact} />
               <Credit />
             </>
