@@ -45,7 +45,20 @@ function ScheduleSection() {
   return (
     <section className="schedule-section" id="schedule">
       <h1 className="main-schedule-heading">Schedule</h1>
+      <h2 className="schedule-title">GLOW COURSES & DETAIL'S</h2>
 
+      <div className="schedule-grid">
+        {schedule.map((item, index) => (
+          <Link to={`/course/${item.slug}`} key={index} className="schedule-card">
+            <div className="schedule-logo-container">
+              <img src={item.image} alt={item.title} className="schedule-logo" />
+            </div>
+            <div className="schedule-time">{item.time}</div>
+            <h3 className="schedule-heading">{item.title}</h3>
+          </Link>
+        ))}
+      </div>
+        <h1>________________________________</h1>
       <div className="professor-subtitle">
         <h3>VISITING PROFESSOR’S SCHEDULE</h3>
         <div className="professor-image-container">
@@ -67,20 +80,7 @@ function ScheduleSection() {
           />
         </div>
       </div>
-
-      <h2 className="schedule-title">GLOW COURSES & DETAIL</h2>
-
-      <div className="schedule-grid">
-        {schedule.map((item, index) => (
-          <Link to={`/course/${item.slug}`} key={index} className="schedule-card">
-            <div className="schedule-logo-container">
-              <img src={item.image} alt={item.title} className="schedule-logo" />
-            </div>
-            <div className="schedule-time">{item.time}</div>
-            <h3 className="schedule-heading">{item.title}</h3>
-          </Link>
-        ))}
-      </div>
+      
     </section>
   );
 }
