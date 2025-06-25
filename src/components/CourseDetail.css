@@ -1,0 +1,82 @@
+/* CourseDetail.css */
+
+.course-detail {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #fffdf7;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.course-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.course-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.course-info {
+  flex: 2 1 400px;
+}
+
+.course-info h1 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.course-info h3 {
+  font-size: 18px;
+  color: #f39c12;
+  margin-bottom: 20px;
+}
+
+.course-info p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e67e22;
+}
+
+@media screen and (max-width: 768px) {
+  .course-detail {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .course-image img {
+    max-width: 100%;
+  }
+
+  .course-info h1 {
+    font-size: 26px;
+  }
+
+  .course-info p {
+    font-size: 15px;
+  }
+}

@@ -13,7 +13,8 @@ import ScheduleSection from "./components/ScheduleSection";
 
 import Credit from "./components/Credit";
 import Announcement from "./components/Announcement";
-import Participants from "./components/Participants"; // <- Tambahkan ini
+import Participants from "./components/Participants";
+import CourseDetail from "./components/CourseDetail"; // ✅ Tambahkan ini
 
 import "./App.css";
 
@@ -39,15 +40,17 @@ const App = () => {
               <ScheduleSection />
               <Speakers data={landingPageData.Speakers} />
               <Gallery data={landingPageData.Gallery} />
-              
               <Contact data={landingPageData.Contact} />
               <Credit />
             </>
           }
         />
 
-        {/* Halaman /participants */}
+        {/* Halaman peserta */}
         <Route path="/participants" element={<Participants />} />
+
+        {/* Halaman detail course */}
+        <Route path="/course/:slug" element={<CourseDetail />} />
       </Routes>
     </Router>
   );
