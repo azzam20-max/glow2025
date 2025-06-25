@@ -14,13 +14,24 @@ function Announcement() {
           <strong>⚠️ Attention:</strong> All participants are <u>required</u> to read the Program Book before attending the event.
         </div>
 
+        <div className="announcement-preview">
+          <iframe
+            title="Program Book Canva"
+            src="https://www.canva.com/design/DAGpYLwbOlI/vydAXYOCXGZCyhPzrdM3OA/view?embed"
+            width="100%"
+            height="480"
+            allowFullScreen
+            style={{ border: 'none', borderRadius: '8px', marginTop: '20px' }}
+          ></iframe>
+        </div>
+
         <a
           href="https://www.canva.com/design/DAGpYLwbOlI/vydAXYOCXGZCyhPzrdM3OA/view"
           target="_blank"
           rel="noopener noreferrer"
           className="announcement-button"
         >
-          📖 View Program Book
+          📖 View Full Program Book
         </a>
       </div>
     </section>
