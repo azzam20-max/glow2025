@@ -10,7 +10,7 @@ function Participants() {
           Open the spreadsheet below to view the list of participants for the event.
         </p>
 
-        {/* <div className="spreadsheet-wrapper">
+        <div className="spreadsheet-wrapper">
           <iframe
             src="https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EVbtriVsiLhDlj9kcjCUyZQBUj4oYt7i7ndYdlQ5qxNTsw?e=8yZ3q6"
             title="Participants Spreadsheet"
@@ -19,7 +19,7 @@ function Participants() {
             frameBorder="0"
             allowFullScreen
           ></iframe>
-        </div> */}
+        </div>
 
         <div className="spreadsheet-button">
           <a
