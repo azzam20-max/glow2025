@@ -68,7 +68,7 @@ function ScheduleSection() {
         </div>
       </div>
 
-      <h2 className="schedule-title">GLOW COURSES</h2>
+      <h2 className="schedule-title">GLOW COURSES & DETAIL</h2>
 
       <div className="schedule-grid">
         {schedule.map((item, index) => (

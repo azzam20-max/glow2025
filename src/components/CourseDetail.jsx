@@ -15,9 +15,9 @@ const courseData = [
       {
         label: "Telecommunication Engineering",
         excelEmbed:
-          "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20CC%20Prodi%20Telekomunikasi'!I6&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True",
+          "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20CC%20Prodi%20Telekomunikasi'!I6&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
         excelLink:
-          "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=v7GNO0"
+          "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=RtinUc&nav=MTVfezA0NUVFRDZDLTVCNTAtNDE5RC05Qzg2LUMzNDE5MUU2QzYyQn0"
       }
     ]
   },
@@ -31,18 +31,18 @@ const courseData = [
     schedules: [
       {
         label: "Industrial Engineering",
-        excelEmbed: "https://onedrive.live.com/embed?resid=SHEET_ID1&em=2",
-        excelLink: "https://onedrive.live.com/view.aspx?resid=SHEET_ID1"
+        excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20OB%20Prodi%20Teknik%20Industri'!I12&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
+        excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=JGabFl&nav=MTVfezM2NDJFOUM4LUQyRTUtNDJEQS1BQzY5LUM5NUFDOTQ3NEI2M30"
       },
       {
         label: "ICT Business",
-        excelEmbed: "https://onedrive.live.com/embed?resid=SHEET_ID2&em=2",
-        excelLink: "https://onedrive.live.com/view.aspx?resid=SHEET_ID2"
+        excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='JADWAL%20OB%20Prodi%20ICT%20Business'!H13&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
+        excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=KRocTf&nav=MTVfezkyMEE5NzIzLTM3RUQtNDBGRS05MTBELTA5MDU3ODk2ODZFOX0"
       },
       {
         label: "Accounting",
-        excelEmbed: "https://onedrive.live.com/embed?resid=SHEET_ID3&em=2",
-        excelLink: "https://onedrive.live.com/view.aspx?resid=SHEET_ID3"
+        excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20OB%20Prodi%20Akuntansi'!M12&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
+        excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=MmVNyQ&nav=MTVfezU4NzI3RjI1LTRFQUUtNEVFNC1BQzY2LUMwMDkwMjc5N0VERX0"
       }
     ]
   },
@@ -52,22 +52,73 @@ const courseData = [
     department: "Informatics, Information System, Electrical Engineering",
     description:
       "Explore how individuals and groups interact within organizations, and how this impacts performance, culture, and leadership effectiveness.",
-    image: "/img/hierarchy.png",
+    image: "/img/artificial-intelligence.png",
     schedules: [
       {
         label: "Informatics",
-        excelEmbed: "https://onedrive.live.com/embed?resid=SHEET_ID1&em=2",
-        excelLink: "https://onedrive.live.com/view.aspx?resid=SHEET_ID1"
+        excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20AI%20Prodi%20Informatika'!L11&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
+        excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=VjhA3U&nav=MTVfezE1MUQ0MEFBLUY4NDgtNDZGMi05NEEyLUU3QUQwQzdDNTM2NH0"
       },
       {
         label: "Information System",
-        excelEmbed: "https://onedrive.live.com/embed?resid=SHEET_ID2&em=2",
-        excelLink: "https://onedrive.live.com/view.aspx?resid=SHEET_ID2"
+        excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20AI%20Prodi%20Sistem%20Informas'!I13&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
+        excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=ZYuV0Q&nav=MTVfezJCNjZCQjNFLTkyMDYtNDlGRS04NUQxLTg2RjlGMzMxMjdGNH0"
       },
       {
         label: "Electrical Engineering",
-        excelEmbed: "https://onedrive.live.com/embed?resid=SHEET_ID3&em=2",
-        excelLink: "https://onedrive.live.com/view.aspx?resid=SHEET_ID3"
+        excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20AI%20Prodi%20Teknik%20Elektro'!F27&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
+        excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=2N7Wsb&nav=MTVfe0IyQzZGQkJELThDMjYtNDJENS04RkVBLTMwMUM4ODBBRkQwNH0"
+      }
+    ]
+  },
+  {
+    slug: "introduction-to-branding",
+    title: "Introduction to Branding",
+    department: "Visual Communication Design",
+    description:
+      "This course introduces cloud infrastructure, services (IaaS, PaaS, SaaS), virtualization, and practical implementations such as AWS, Azure, and GCP.",
+    image: "/img/package.png",
+    schedules: [
+      {
+        label: "Visual Communication Design",
+        excelEmbed:
+          "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20ItB%20Prodi%20DKV%20'!I6&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
+        excelLink:
+          "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=IXzxXF&nav=MTVfe0UwRERCRjNCLTEwMDAtNDlDNC1CRkQwLUY5Mjg0Q0MxRDRERX0"
+      }
+    ]
+  },
+  {
+    slug: "international-communication",
+    title: "International Communication",
+    department: "Communication Science",
+    description:
+      "This course introduces cloud infrastructure, services (IaaS, PaaS, SaaS), virtualization, and practical implementations such as AWS, Azure, and GCP.",
+    image: "/img/podium.png",
+    schedules: [
+      {
+        label: "Communication Science",
+        excelEmbed:
+          "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20CfS%20and%20SDGs%20Prodi%20IKOM'!I6&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
+        excelLink:
+          "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=oyl9BA&nav=MTVfe0RDNjI0MUJCLTlBOUEtNDM3RS04ODk5LUFERUM2NTVBODQ3NX0"
+      }
+    ]
+  },
+  {
+    slug: "business-model",
+    title: "Business Model",
+    department: "Telecommunication Engineering",
+    description:
+      "This course introduces cloud infrastructure, services (IaaS, PaaS, SaaS), virtualization, and practical implementations such as AWS, Azure, and GCP.",
+    image: "/img/business.png",
+    schedules: [
+      {
+        label: "Business Administration",
+        excelEmbed:
+          "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='Jadwal%20BM%20Prodi%20Adbis'!A2&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
+        excelLink:
+          "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=lS5ewo&nav=MTVfe0Y2NTMyODkzLTFCRUYtNEU2Ri1CMUIzLUE1NzFGNDBCMUZFRn0"
       }
     ]
   }
@@ -107,7 +158,7 @@ function CourseDetail() {
 
             <iframe
               src={schedule.excelEmbed}
-              width="100%"
+              width="1200px"
               height="600px"
               frameBorder="0"
               title={`Excel Preview ${schedule.label}`}
