@@ -1,0 +1,70 @@
+/* team.css */
+
+.team-section {
+  padding: 80px 20px;
+  background-color: #f4f8fb;
+  text-align: center;
+  scroll-margin-top: 60px; /* agar tidak tertutup navbar saat anchor */
+}
+
+.team-c2 h3 {
+  font-size: 36px;
+  color: #0066cc;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.professor-image-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.team-image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(0, 102, 204, 0.15);
+}
+
+/* Responsive Tablet */
+@media (max-width: 768px) {
+  .team-section {
+    padding: 60px 10px;
+  }
+
+  .team-c2 h3 {
+    font-size: 28px;
+  }
+
+  .team-image {
+    border-radius: 12px;
+  }
+}
+
+/* Responsive Mobile */
+@media (max-width: 480px) {
+  .team-section {
+    padding: 40px 5px;
+  }
+
+  .team-c2 h3 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .team-image {
+    border-radius: 8px;
+    box-shadow: none;
+  }
+}

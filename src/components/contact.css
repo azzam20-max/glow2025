@@ -1,13 +1,10 @@
 /* Contact Section */
 /* Contact Component Styles */
-section {
-  scroll-margin-top: 80px; /* atau setinggi navbar kamu (misal 70-80px) */
-}
 
 .contact-wrapper {
   min-height: 100vh;
   background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 50%, #faf5ff 100%);
-  padding-top: 70px; /* biar konten ga ketutup navbar */
+  padding-top: 10px; /* biar konten ga ketutup navbar */
 }
 
 .contact-section {

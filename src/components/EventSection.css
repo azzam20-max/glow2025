@@ -1,7 +1,9 @@
 /* Event Section */
 .event-section {
-  padding: 80px 20px;
-  background-color: #f5f5f5;
+  padding: 50px 20px;
+  scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar kamu */
+
+  background: linear-gradient(135deg, #1a237e, #0d47a1);
 }
 
 .event-container {
@@ -12,25 +14,26 @@
   gap: 40px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px; /* 👈 Tambahan padding sisi kanan-kiri */
+  padding: 0 20px;
 }
 
 .event-text {
   flex: 1;
   min-width: 300px;
+  color: #ffffff; /* 👈 Default text color in case h2/p missed */
 }
 
 .event-text h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #2c3e50;
+  color: #ffffff; /* 👈 Ubah jadi putih */
 }
 
 .event-text p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 15px;
-  color: #555;
+  color: #f0f0f0; /* 👈 Putih keabu-abuan agar lebih lembut */
   text-align: justify;
 }
 
@@ -52,7 +55,7 @@
 .event-extra-image {
   margin-top: 40px;
   text-align: center;
-  padding: 0 20px; /* 👈 Tambahan padding sisi kanan-kiri */
+  padding: 0 20px;
 }
 
 .event-extra-image img {
@@ -66,7 +69,8 @@
 /* Responsive Tablet */
 @media screen and (max-width: 768px) {
   .event-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
+    scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar kamu */
   }
 
   .event-container {
@@ -98,7 +102,8 @@
 /* Responsive Mobile */
 @media screen and (max-width: 480px) {
   .event-section {
-    padding: 50px 15px;
+    padding: 40px 15px;
+    scroll-margin-top: 70px; /* Sesuaikan dengan tinggi navbar kamu */
   }
 
   .event-container {

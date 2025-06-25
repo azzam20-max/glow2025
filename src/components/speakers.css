@@ -1,8 +1,13 @@
 /* Navigation */
 
 /* Testimonials Section */
+#speakers {
+  scroll-margin-top: 80px;
+}
+
 #team-gallery {
   padding-top: 90px; /* Lebih tinggi dari navbar supaya aman */
+  scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar kamu */
 }
 
 #testimonials {
@@ -10,6 +15,7 @@
   padding: 80px 0;
   color: #fff;
   padding-top: 90px; /* Lebih tinggi dari navbar supaya aman */
+  scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar kamu */
 }
 
 .section-title h2 {
@@ -75,7 +81,8 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
+  padding: 70px;
 }
 
 .section-header h2 {
@@ -101,7 +108,7 @@
 }
 
 .speakers-group {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .group-title {
@@ -170,6 +177,8 @@
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .speakers-section {
+    scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar kamu */
+
     padding: 60px 0;
   }
 

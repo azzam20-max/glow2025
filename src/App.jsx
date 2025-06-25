@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { Speakers } from "./components/speakers";
 import { Gallery } from "./components/gallery";
+import Team from "./components/Team";
+
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 
@@ -40,6 +42,7 @@ const App = () => {
               <ScheduleSection />
               <Speakers data={landingPageData.Speakers} />
               <Gallery data={landingPageData.Gallery} />
+              <Team />
               <Contact data={landingPageData.Contact} />
               <Credit />
             </>

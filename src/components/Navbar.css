@@ -53,29 +53,20 @@ section {
   font-weight: 600;
   text-decoration: none;
   font-size: 16px;
-  transition: color 0.3s;
   padding: 6px 0;
   position: relative;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
   color: #f39c12;
 }
 
+/* Active link styles */
 .nav-links li.active a {
-  color: #f39c12;
-}
-
-.nav-links li.active a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  background-color: #f39c12;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  color: orange;
+  border-bottom: 2.5px solid orange;
+  transition: color 0.2s, border-bottom 0.2s;
 }
 
 /* Hamburger */
@@ -105,6 +96,19 @@ section {
 
 .hamburger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Progress bar scroll indicator */
+.scroll-progress-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9800 0%, #ffb74d 100%);
+  z-index: 10;
+  transition: width 0.2s;
 }
 
 /* Mobile Styles */
