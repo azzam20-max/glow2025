@@ -503,3 +503,53 @@ section {
     height: 1rem;
   }
 }
+@media (max-width: 768px) {
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    gap: 1rem;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .contact-icon {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .contact-title-small {
+    font-size: 12px;
+  }
+
+  .contact-text {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-cards {
+    grid-template-columns: 1fr; /* 1 kolom penuh */
+  }
+
+  .contact-item {
+    padding: 0.75rem;
+  }
+
+  .contact-icon {
+    font-size: 1.25rem;
+  }
+
+  .contact-title-small {
+    font-size: 11px;
+  }
+
+  .contact-text {
+    font-size: 9px;
+  }
+}

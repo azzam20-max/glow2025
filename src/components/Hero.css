@@ -170,14 +170,20 @@ body {
     font-size: 16px;
   }
 
+  /* ✅ Revisi di sini: countdown dalam grid 2 kolom */
   .countdown-inline {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
     gap: 12px;
+    justify-content: center;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .countdown-item {
     font-size: 1.3rem;
-    min-width: 70px;
+    min-width: auto;
     padding: 10px 8px;
   }
 
