@@ -76,7 +76,7 @@ function CourseDetail() {
         <h1>{course.title}</h1>
         <h3>{course.department}</h3>
         <p>{course.description}</p>
-        <Link to="/" className="back-button">⬅ Back to Home</Link>
+        <Link to="/#schedule" className="back-button">⬅ Back to Home</Link>
       </div>
     </div>
   );
