@@ -1,9 +1,10 @@
 "use client";
 import PropTypes from "prop-types";
-
 import { motion } from "framer-motion";
+import { memo, useMemo } from "react";
 import "./speakers.css";
 
+// Memoized data untuk mencegah re-creation
 const speakers = [
   {
     name: "Prof. Yoshihiro Mizoguchi",
@@ -110,13 +111,37 @@ const collaborators = [
   },
 ];
 
-const PersonCard = ({ person, index }) => {
+// Optimized PersonCard component dengan memo
+const PersonCard = memo(({ person, index }) => {
+  // Simplified animation variants untuk performa lebih baik
+  const cardVariants = useMemo(
+    () => ({
+      hidden: {
+        opacity: 0,
+        y: 30, // Reduced movement
+      },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.4, // Faster animation
+          delay: index * 0.05, // Reduced stagger delay
+          ease: "easeOut",
+        },
+      },
+    }),
+    [index]
+  );
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{
+        once: true,
+        margin: "-50px", // Trigger animation earlier
+      }}
       className="speaker-card"
     >
       <div className="speaker-card-inner">
@@ -125,6 +150,11 @@ const PersonCard = ({ person, index }) => {
             src={person.image || "/placeholder.svg"}
             alt={person.name}
             className="speaker-image"
+            loading="lazy" // Lazy loading untuk performa
+            decoding="async" // Async decoding
+            // Optimized image attributes
+            width="120"
+            height="120"
           />
         </div>
 
@@ -133,41 +163,91 @@ const PersonCard = ({ person, index }) => {
       </div>
     </motion.div>
   );
-};
+});
 
-export const Speakers = () => {
+PersonCard.displayName = "PersonCard";
+
+// Optimized SpeakerGroup component
+const SpeakerGroup = memo(({ title, people, startIndex = 0 }) => (
+  <div className="speakers-group">
+    <h3 className="group-title">{title}</h3>
+    <div className="speakers-grid">
+      {people.map((person, index) => (
+        <PersonCard
+          key={`${title}-${index}`} // More specific key
+          person={person}
+          index={startIndex + index}
+        />
+      ))}
+    </div>
+  </div>
+));
+
+SpeakerGroup.displayName = "SpeakerGroup";
+
+// Main component dengan optimisasi
+export const Speakers = memo(() => {
+  // Container animation dengan reduced complexity
+  const containerVariants = useMemo(
+    () => ({
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          duration: 0.6,
+          ease: "easeOut",
+        },
+      },
+    }),
+    []
+  );
+
   return (
     <section id="speakers" className="speakers-section">
-      <div className="speakers-container">
+      <motion.div
+        className="speakers-container"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <div className="section-header">
           <h2>Speakers and Collaborators</h2>
           <div className="section-divider"></div>
         </div>
 
         <div className="speakers-content">
-          <div className="speakers-group">
-            <h3 className="group-title">International Speakers</h3>
-            <div className="speakers-grid">
-              {speakers.map((speaker, index) => (
-                <PersonCard key={index} person={speaker} index={index} />
-              ))}
-            </div>
-          </div>
+          <SpeakerGroup
+            title="International Speakers"
+            people={speakers}
+            startIndex={0}
+          />
 
-          <div className="speakers-group">
-            <h3 className="group-title">Local Collaborators</h3>
-            <div className="speakers-grid">
-              {collaborators.map((collaborator, index) => (
-                <PersonCard key={index} person={collaborator} index={index} />
-              ))}
-            </div>
-          </div>
+          <SpeakerGroup
+            title="Local Collaborators"
+            people={collaborators}
+            startIndex={speakers.length}
+          />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
-};
+});
+
+Speakers.displayName = "Speakers";
+
+// PropTypes
 PersonCard.propTypes = {
-  person: PropTypes.any.isRequired,
+  person: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    affiliation: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+  }).isRequired,
   index: PropTypes.number.isRequired,
+};
+
+SpeakerGroup.propTypes = {
+  title: PropTypes.string.isRequired,
+  people: PropTypes.array.isRequired,
+  startIndex: PropTypes.number,
 };

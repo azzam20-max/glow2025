@@ -1,21 +1,22 @@
-/* Navigation */
+/* Optimized CSS untuk performa lebih baik */
 
-/* Testimonials Section */
-#speakers {
+/* Navigation & Section Positioning - Optimized */
+#speakers,
+#team-gallery,
+#testimonials {
   scroll-margin-top: 80px;
 }
 
-#team-gallery {
-  padding-top: 90px; /* Lebih tinggi dari navbar supaya aman */
-  scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar kamu */
+#team-gallery,
+#testimonials {
+  padding-top: 90px;
 }
 
+/* Testimonials Section - Reduced complexity */
 #testimonials {
-  background: #0066cc; /* Biru solid */
+  background: #0066cc;
   padding: 80px 0;
   color: #fff;
-  padding-top: 90px; /* Lebih tinggi dari navbar supaya aman */
-  scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar kamu */
 }
 
 .section-title h2 {
@@ -35,15 +36,14 @@
   display: inline-block;
   border-radius: 50%;
   border: 3px solid #ffa500;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* opsional biar menonjol */
+  /* Removed shadow untuk performa */
 }
 
 .testimonial img {
-  width: 100px; /* Ukuran lebih kecil */
+  width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
-  border: none;
   display: block;
   margin: 0 auto;
   background: whitesmoke;
@@ -51,26 +51,28 @@
 
 .testimonial-meta {
   font-weight: 700;
-  color: #ffa500; /* Orange keemasan (atau bisa #FFC107 kalau mau lebih kuning) */
+  color: #ffa500;
   margin-top: 8px;
 }
+
 .testimonial-desc {
-  margin: 0px 0 0 0; /* Jarak kecil di atas */
-  color: #ffffff; /* Putih */
+  margin: 0;
+  color: #ffffff;
 }
 
 .testimonial p {
   font-size: 14px;
-  color: #ffffff; /* Putih */
+  color: #ffffff;
   margin-top: 4px;
 }
 
+/* Speakers Section - Optimized gradients and effects */
 .speakers-section {
   background: linear-gradient(135deg, #1a237e, #0d47a1);
   padding: 80px 0;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  /* Removed overflow hidden untuk performa */
 }
 
 .speakers-container {
@@ -81,7 +83,7 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   padding: 70px;
 }
 
@@ -90,13 +92,14 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Simplified text shadow */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .section-divider {
   width: 80px;
   height: 4px;
-  background: linear-gradient(to right, #ffd700, #ff8c00);
+  background: #ffd700; /* Solid color instead of gradient */
   margin: 0 auto;
   border-radius: 2px;
 }
@@ -108,7 +111,7 @@
 }
 
 .speakers-group {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .group-title {
@@ -126,19 +129,25 @@
   padding: 20px 0;
 }
 
+/* Optimized Speaker Card */
 .speaker-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  backdrop-filter: blur(10px);
+  /* Simplified backdrop filter */
+  backdrop-filter: blur(5px);
   padding: 20px;
-  transition: all 0.3s ease;
+  /* Reduced transition complexity */
+  transition: transform 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
+  /* Hardware acceleration */
+  will-change: transform;
 }
 
 .speaker-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px); /* Reduced movement */
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  /* Simplified shadow */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .speaker-image-container {
@@ -148,7 +157,8 @@
   position: relative;
   border-radius: 50%;
   padding: 3px;
-  background: linear-gradient(45deg, #ffd700, #ff8c00);
+  /* Solid color instead of gradient */
+  background: #ffd700;
 }
 
 .speaker-image {
@@ -157,6 +167,8 @@
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ffffff;
+  /* Optimize image rendering */
+  image-rendering: optimizeQuality;
 }
 
 .speaker-name {
@@ -174,12 +186,15 @@
   line-height: 1.4;
 }
 
-/* Responsive Design */
+/* Responsive Design - Optimized */
 @media screen and (max-width: 768px) {
   .speakers-section {
-    scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar kamu */
-
+    scroll-margin-top: 80px;
     padding: 60px 0;
+  }
+
+  .section-header {
+    padding: 40px;
   }
 
   .section-header h2 {
@@ -207,21 +222,45 @@
   .speaker-affiliation {
     font-size: 0.8rem;
   }
+
+  /* Disable animations on mobile for better performance */
+  .speaker-card {
+    animation: none;
+  }
 }
 
-/* Animasi */
+/* Optimized Float Animation - Reduced complexity */
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%,
   100% {
     transform: translateY(0px);
   }
+  50% {
+    transform: translateY(-5px); /* Reduced movement */
+  }
 }
 
-.speaker-card {
-  animation: float 3s ease-in-out infinite;
+/* Apply animation only on larger screens and with reduced intensity */
+@media screen and (min-width: 769px) {
+  .speaker-card {
+    animation: float 4s ease-in-out infinite; /* Slower animation */
+  }
+
+  /* Stagger animation for better performance */
+  .speaker-card:nth-child(even) {
+    animation-delay: 2s;
+  }
+}
+
+/* Performance optimizations */
+.speakers-section * {
+  /* Reduce repaints */
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Preload critical elements */
+.speaker-image {
+  /* Optimize image loading */
+  loading: lazy;
 }
