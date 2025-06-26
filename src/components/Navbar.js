@@ -80,8 +80,8 @@ function Navbar() {
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
           {[
             "about",
-            "schedule",
             "speakers",
+            "schedule",
             "gallery",
             "our team",
             "contact",

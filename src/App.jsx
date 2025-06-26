@@ -39,8 +39,9 @@ const App = () => {
               <Hero />
               <Announcement />
               <EventSection />
-              <ScheduleSection />
               <Speakers data={landingPageData.Speakers} />
+              <ScheduleSection />
+              
               <Gallery data={landingPageData.Gallery} />
               <Team />
               <Contact data={landingPageData.Contact} />
