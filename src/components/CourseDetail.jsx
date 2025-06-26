@@ -33,13 +33,14 @@ const courseData = [
          label: "Industrial Engineering",
          excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='OB%20Schedule%20-%20Industrial%20Eng.'!I12&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
          excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=AbJ0R5&nav=MTVfezM2NDJFOUM4LUQyRTUtNDJEQS1BQzY5LUM5NUFDOTQ3NEI2M30",
-        imagePreview: "/img/schedule/schedule-preview-telco.png"
+        imagePreview: "/img/schedule/schedule-preview-industry.png"
         },
        {
          label: "ICT Business",
          excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='OB%20Schedule%20-%20ICT%20Business'!H13&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
-         excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=KRocTf&nav=MTVfezkyMEE5NzIzLTM3RUQtNDBGRS05MTBELTA5MDU3ODk2ODZFOX0"
-       },
+         excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=KRocTf&nav=MTVfezkyMEE5NzIzLTM3RUQtNDBGRS05MTBELTA5MDU3ODk2ODZFOX0",
+        imagePreview: "/img/schedule/schedule-preview-OB-ICTbusiness.jpg"
+        },
        {
          label: "Accounting",
          excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='OB%20Schedule%20-%20Accounting'!J13&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
