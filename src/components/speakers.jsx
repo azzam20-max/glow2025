@@ -224,7 +224,7 @@ export const Speakers = memo(() => {
           />
 
           <SpeakerGroup
-            title="Local Collaborators"
+            title="Co-Lecturers"
             people={collaborators}
             startIndex={speakers.length}
           />
