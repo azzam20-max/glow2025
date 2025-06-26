@@ -66,7 +66,7 @@ function ScheduleSection() {
         ))}
       </div>
       <h1>________________________________</h1>
-      <div className="professor-subtitle">
+      {/* <div className="professor-subtitle">
         <h3>VISITING PROFESSOR’S SCHEDULE</h3>
         <div className="professor-image-container">
           <img
@@ -75,9 +75,9 @@ function ScheduleSection() {
             className="professor-image"
           />
         </div>
-      </div>
+      </div> */}
 
-      <div className="professor-subtitle">
+      {/* <div className="professor-subtitle">
         <h3>SECOND WEEK OF GLOW SCHEDULE</h3>
         <div className="professor-image-container">
           <img
@@ -86,7 +86,7 @@ function ScheduleSection() {
             className="professor-image"
           />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
