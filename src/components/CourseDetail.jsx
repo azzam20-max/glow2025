@@ -33,7 +33,7 @@ const courseData = [
          label: "Industrial Engineering",
          excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='OB%20Schedule%20-%20Industrial%20Eng.'!I12&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
          excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=AbJ0R5&nav=MTVfezM2NDJFOUM4LUQyRTUtNDJEQS1BQzY5LUM5NUFDOTQ3NEI2M30",
-        imagePreview: "/img/schedule/schedule-preview-industry.png"
+        imagePreview: "/img/schedule/schedule-preview-industrial.jpg"
         },
        {
          label: "ICT Business",
@@ -44,8 +44,9 @@ const courseData = [
        {
          label: "Accounting",
          excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='OB%20Schedule%20-%20Accounting'!J13&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
-         excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=MmVNyQ&nav=MTVfezU4NzI3RjI1LTRFQUUtNEVFNC1BQzY2LUMwMDkwMjc5N0VERX0"
-       }
+         excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=MmVNyQ&nav=MTVfezU4NzI3RjI1LTRFQUUtNEVFNC1BQzY2LUMwMDkwMjc5N0VERX0",
+        imagePreview: "/img/schedule/schedule=preview-OB-ACC.jpg"
+        }
      ]
    },
    {
@@ -89,8 +90,9 @@ const courseData = [
          excelEmbed:
            "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='ItB%20Schedule%20-%20Visual%20Comm.%20Des'!I6&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
          excelLink:
-           "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=IXzxXF&nav=MTVfe0UwRERCRjNCLTEwMDAtNDlDNC1CRkQwLUY5Mjg0Q0MxRDRERX0"
-       }
+           "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=IXzxXF&nav=MTVfe0UwRERCRjNCLTEwMDAtNDlDNC1CRkQwLUY5Mjg0Q0MxRDRERX0",
+        imagePreview: "/img/schedule/schedule-preview-dkv.jpg"
+        }
      ]
    },
    {
@@ -106,14 +108,15 @@ const courseData = [
          excelEmbed:
            "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='CfS%20%26%20SDGs%20-%20Comm.%20Science'!I6&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
          excelLink:
-           "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=oyl9BA&nav=MTVfe0RDNjI0MUJCLTlBOUEtNDM3RS04ODk5LUFERUM2NTVBODQ3NX0"
-       }
+           "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=oyl9BA&nav=MTVfe0RDNjI0MUJCLTlBOUEtNDM3RS04ODk5LUFERUM2NTVBODQ3NX0",
+        imagePreview: "/img/schedule/schedule-preview-ilkom.jpg"
+        }
      ]
    },
    {
      slug: "business-model",
      title: "Business Model",
-     department: "Telecommunication Engineering",
+     department: "Business Administration",
      description:
        "This course introduces cloud infrastructure, services (IaaS, PaaS, SaaS), virtualization, and practical implementations such as AWS, Azure, and GCP.",
      image: "/img/business.png",
@@ -123,8 +126,9 @@ const courseData = [
          excelEmbed:
            "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='BM%20Schedule%20-%20Business%20Admin.'!A2&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
          excelLink:
-           "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=lS5ewo&nav=MTVfe0Y2NTMyODkzLTFCRUYtNEU2Ri1CMUIzLUE1NzFGNDBCMUZFRn0"
-       }
+           "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=lS5ewo&nav=MTVfe0Y2NTMyODkzLTFCRUYtNEU2Ri1CMUIzLUE1NzFGNDBCMUZFRn0",
+        imagePreview: "/img/schedule/schedule-preview-adbis.jpg"
+          }
      ]
    }
   // Tambahkan course lain di sini
