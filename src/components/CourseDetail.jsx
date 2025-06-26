@@ -59,18 +59,21 @@ const courseData = [
        {
          label: "Informatics",
          excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='AI%20Schedule%20-%20Informatics%20Study'!D11&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
-         excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=VjhA3U&nav=MTVfezE1MUQ0MEFBLUY4NDgtNDZGMi05NEEyLUU3QUQwQzdDNTM2NH0"
-       },
+         excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=VjhA3U&nav=MTVfezE1MUQ0MEFBLUY4NDgtNDZGMi05NEEyLUU3QUQwQzdDNTM2NH0",
+        imagePreview: "/img/schedule/schedule-preview-AI-if.png"
+        },
        {
          label: "Information System",
          excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='AI%20Schedule%20%E2%80%93Information%20System'!J15&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
-         excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=ZYuV0Q&nav=MTVfezJCNjZCQjNFLTkyMDYtNDlGRS04NUQxLTg2RjlGMzMxMjdGNH0"
-       },
+         excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=ZYuV0Q&nav=MTVfezJCNjZCQjNFLTkyMDYtNDlGRS04NUQxLTg2RjlGMzMxMjdGNH0",
+        imagePreview: "/img/schedule/schedule-preview-AI-si.png"
+        },
        {
          label: "Electrical Engineering",
          excelEmbed: "https://telkomuniversityofficial-my.sharepoint.com/personal/icao_telkomuniversity_ac_id/_layouts/15/Doc.aspx?sourcedoc={82b4b9a5-7b75-40f4-91f3-10f196cca936}&action=embedview&wdAllowInteractivity=False&ActiveCell='AI%20Schedule%20-%20Electrical%20Eng.'!F27&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True",
-         excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=2N7Wsb&nav=MTVfe0IyQzZGQkJELThDMjYtNDJENS04RkVBLTMwMUM4ODBBRkQwNH0"
-       }
+         excelLink: "https://telkomuniversityofficial-my.sharepoint.com/:x:/g/personal/icao_telkomuniversity_ac_id/EaW5tIJ1e_RAkfMQ8ZbMqTYBTEFcXb2NHFwieR0y9SIINw?e=2N7Wsb&nav=MTVfe0IyQzZGQkJELThDMjYtNDJENS04RkVBLTMwMUM4ODBBRkQwNH0",
+        imagePreview: "/img/schedule/schedule-preview-AI-electro.png"
+        }
      ]
    },
    {
