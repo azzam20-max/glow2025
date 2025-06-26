@@ -148,7 +148,7 @@ function CourseDetail() {
       <div className="course-info">
         <h1>{course.title}</h1>
         <h3>{course.department}</h3>
-        <p>{course.description}</p>
+        {/* <p>{course.description}</p> */}
 
         {course.schedules.map((schedule, index) => (
           <div className="course-sheet-preview" key={index}>
@@ -171,7 +171,7 @@ function CourseDetail() {
               rel="noopener noreferrer"
               className="open-sheet-button"
             >
-              📄 Open in Excel Web ({schedule.label})
+              📄 Open in Excel ({schedule.label})
             </a>
           </div>
         ))}

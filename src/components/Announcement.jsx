@@ -26,7 +26,7 @@ function Announcement() {
         </div>
 
         <a
-          href="https://www.canva.com/design/DAGpYLwbOlI/vydAXYOCXGZCyhPzrdM3OA/view"
+          href="https://heyzine.com/flip-book/e8d829dab4.html"
           target="_blank"
           rel="noopener noreferrer"
           className="announcement-button"
