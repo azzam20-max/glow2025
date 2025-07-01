@@ -1,5 +1,4 @@
 import './PengumumanPage.css';
-
 import { useEffect, useState } from 'react';
 import { auth, db } from '../firebase';
 import {
@@ -22,6 +21,7 @@ function PengumumanPage() {
   const [isi, setIsi] = useState('');
   const [link, setLink] = useState('');
   const [editId, setEditId] = useState(null);
+  const [loading, setLoading] = useState(true); // 🔄 Tambahkan loading
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -33,12 +33,14 @@ function PengumumanPage() {
   }, []);
 
   const fetchData = async () => {
+    setLoading(true); // 🔄 Mulai loading
     const snapshot = await getDocs(collection(db, 'pengumuman'));
     const data = snapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
     setPengumuman(data);
+    setLoading(false); // ✅ Selesai loading
   };
 
   const handleSubmit = async (e) => {
@@ -85,9 +87,19 @@ function PengumumanPage() {
     setUser(null);
   };
 
+  // 🔄 Tampilkan spinner saat loading
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <div className="loader"></div>
+        <p>Memuat pengumuman...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="pengumuman-container">
-      <h2>Daftar Pengumuman</h2>
+      <h2>Announcement</h2>
 
       {user && (
         <>
