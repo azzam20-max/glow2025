@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "country-list": "^2.3.0",
     "emailjs-com": "^2.6.4",
+    "firebase": "^11.10.0",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.518.0",
     "prop-types": "^15.8.1",

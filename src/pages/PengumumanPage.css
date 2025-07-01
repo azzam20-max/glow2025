@@ -1,0 +1,152 @@
+.pengumuman-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+.pengumuman-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #4a148c;
+}
+
+.logout-button {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-button:hover {
+  background-color: #b71c1c;
+}
+
+.pengumuman-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  background: #f3e5f5;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.pengumuman-form input,
+.pengumuman-form textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.pengumuman-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.pengumuman-form button {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pengumuman-form button:hover {
+  background-color: #4a148c;
+}
+
+.login-note {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.login-note a {
+  color: #6a1b9a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-note a:hover {
+  text-decoration: underline;
+}
+
+.pengumuman-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pengumuman-item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pengumuman-item h4 {
+  margin: 0 0 0.5rem 0;
+  color: #4a148c;
+}
+
+.pengumuman-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.pengumuman-item button {
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.pengumuman-item button:hover {
+  background-color: #4a148c;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .pengumuman-form,
+  .pengumuman-item {
+    padding: 0.8rem;
+  }
+
+  .pengumuman-form button,
+  .pengumuman-item button,
+  .logout-button {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.5rem;
+  }
+
+  .pengumuman-form input,
+  .pengumuman-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .pengumuman-container h2 {
+    font-size: 1.5rem;
+  }
+}
