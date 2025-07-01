@@ -1,26 +1,28 @@
+import { FaBell } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import { getData } from "country-list";
+import { useNavigate } from "react-router-dom";
 import "./Hero.css";
 
+
+
 function Hero() {
+  const navigate = useNavigate();
+
+  // Countdown
   const calculateTimeLeft = () => {
     const targetDate = new Date("2025-07-07T00:00:00");
     const now = new Date();
     const difference = targetDate - now;
 
-    let timeLeft = {};
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / (1000 * 60)) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    } else {
-      timeLeft = null;
-    }
+    if (difference <= 0) return null;
 
-    return timeLeft;
+    return {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / (1000 * 60)) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
+    };
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -35,40 +37,41 @@ function Hero() {
   const renderCountdown = () => {
     if (!timeLeft) return <p className="countdown">It's time!</p>;
 
-    const { days, hours, minutes, seconds } = timeLeft;
-
     return (
       <div className="countdown-inline">
-        <span className="countdown-item">
-          {days} <span className="countdown-label">Days</span>
-        </span>
-        <span className="countdown-item">
-          {hours} <span className="countdown-label">Hours</span>
-        </span>
-        <span className="countdown-item">
-          {minutes} <span className="countdown-label">Minutes</span>
-        </span>
-        <span className="countdown-item">
-          {seconds} <span className="countdown-label">Seconds</span>
-        </span>
+        {Object.entries(timeLeft).map(([label, value]) => (
+          <span className="countdown-item" key={label}>
+            {value} <span className="countdown-label">{label}</span>
+          </span>
+        ))}
       </div>
     );
   };
 
-  // Ambil semua negara, hilangkan duplikat & Israel
-  const countries = getData();
-  const uniqueCountries = Array.from(
-    new Map(
-      countries
-        .filter(
-          (c) => c.code !== "IL" && c.code !== "US" // Hapus Israel dan USA
-        ) // Hapus Israel
-        .map((c) => [c.code.toUpperCase(), c]) // Hindari duplikat
-    ).values()
-  ).sort((a, b) => a.name.localeCompare(b.name));
+  const countries = getData()
+    .filter((c) => c.code !== "IL" && c.code !== "US")
+    .reduce((acc, c) => {
+      acc[c.code] = c;
+      return acc;
+    }, {});
+  const uniqueCountries = Object.values(countries).sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+
   return (
     <section className="hero" id="hero">
-      {/* 🔄 Animasi semua flag dunia otomatis */}
+      {/* 🔄 Icon Notifikasi */}
+      <button
+        className="notification-button-floating"
+        onClick={() => navigate("/pengumuman")}
+        title="Lihat Pengumuman"
+      >
+        <FaBell />
+        <span className="notification-pulse"></span>
+      </button>
+
+
+      {/* 🔄 Bendera */}
       <div className="flag-marquee">
         <div className="flag-wrapper">
           {uniqueCountries.map((country, index) => (
@@ -77,13 +80,13 @@ function Hero() {
               src={`https://flagcdn.com/w80/${country.code.toLowerCase()}.png`}
               alt={country.name}
               className="flag-item"
-              style={{ animationDelay: `${index * 0.5}s`, left: "-60px" }}
               loading="lazy"
             />
           ))}
         </div>
       </div>
 
+      {/* 🔄 Isi Hero */}
       <div className="hero-overlay">
         <div className="hero-container">
           <div className="hero-text">

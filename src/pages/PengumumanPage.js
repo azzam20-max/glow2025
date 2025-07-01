@@ -20,7 +20,7 @@ function PengumumanPage() {
   const [pengumuman, setPengumuman] = useState([]);
   const [judul, setJudul] = useState('');
   const [isi, setIsi] = useState('');
-  const [gambarUrl, setGambarUrl] = useState('');
+  const [link, setLink] = useState('');
   const [editId, setEditId] = useState(null);
 
   useEffect(() => {
@@ -29,7 +29,6 @@ function PengumumanPage() {
     });
 
     fetchData();
-
     return () => unsubscribe();
   }, []);
 
@@ -46,42 +45,32 @@ function PengumumanPage() {
     e.preventDefault();
     if (!user) return alert("Harus login untuk menambahkan.");
 
-    // 🔄 Konversi link Google Drive jika perlu
-    let finalGambar = gambarUrl;
-    const googleDrivePattern = /https:\/\/drive\.google\.com\/file\/d\/([^/]+)\//;
-
-    const match = gambarUrl.match(googleDrivePattern);
-    if (match && match[1]) {
-      const fileId = match[1];
-      finalGambar = `https://drive.google.com/uc?export=view&id=${fileId}`;
-    }
-
     if (editId) {
       await updateDoc(doc(db, 'pengumuman', editId), {
         judul,
         isi,
-        gambar: finalGambar,
+        link
       });
       setEditId(null);
     } else {
       await addDoc(collection(db, 'pengumuman'), {
         judul,
         isi,
-        gambar: finalGambar,
+        link,
         tanggal: new Date(),
       });
     }
 
     setJudul('');
     setIsi('');
-    setGambarUrl('');
+    setLink('');
     fetchData();
   };
 
   const handleEdit = (item) => {
     setJudul(item.judul);
     setIsi(item.isi);
-    setGambarUrl(item.gambar || '');
+    setLink(item.link || '');
     setEditId(item.id);
   };
 
@@ -100,7 +89,7 @@ function PengumumanPage() {
     <div className="pengumuman-container">
       <h2>Daftar Pengumuman</h2>
 
-      {user ? (
+      {user && (
         <>
           <p>Login sebagai: {user.email}</p>
           <button className="logout-button" onClick={handleLogout}>Logout</button>
@@ -120,15 +109,13 @@ function PengumumanPage() {
             />
             <input
               type="url"
-              value={gambarUrl}
-              onChange={(e) => setGambarUrl(e.target.value)}
-              placeholder="Link gambar (opsional, bisa Google Drive)"
+              value={link}
+              onChange={(e) => setLink(e.target.value)}
+              placeholder="Tautan (opsional)"
             />
             <button type="submit">{editId ? 'Update' : 'Tambah'}</button>
           </form>
         </>
-      ) : (
-        <p className="login-note"><a href="/login">Login</a> untuk menambah/edit pengumuman.</p>
       )}
 
       <ul className="pengumuman-list">
@@ -136,12 +123,12 @@ function PengumumanPage() {
           <li className="pengumuman-item" key={item.id}>
             <h4>{item.judul}</h4>
             <p>{item.isi}</p>
-            {item.gambar && (
-              <img
-                src={item.gambar}
-                alt="Gambar pengumuman"
-                style={{ maxWidth: '100%', borderRadius: '8px', marginTop: '10px' }}
-              />
+            {item.link && (
+              <p>
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="pengumuman-link">
+                  🔗 Lihat Tautan
+                </a>
+              </p>
             )}
 
             {user && (

@@ -1,51 +1,55 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f8fa;
+  color: #222;
+}
+
+/* Container Utama */
 .pengumuman-container {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  font-family: Arial, sans-serif;
-  background-color: #fdfdfd;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.pengumuman-container h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 24px;
   color: #333;
 }
 
-.pengumuman-container h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  color: #4a148c;
-}
-
-.logout-button {
-  background-color: #c62828;
-  color: white;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.logout-button:hover {
-  background-color: #b71c1c;
-}
-
+/* Form Tambah/Edit */
 .pengumuman-form {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-bottom: 2rem;
-  background: #f3e5f5;
-  padding: 1rem;
-  border-radius: 10px;
+  gap: 16px;
+  margin-bottom: 32px;
 }
 
 .pengumuman-form input,
 .pengumuman-form textarea {
-  padding: 0.5rem;
-  font-size: 1rem;
+  padding: 12px 14px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 100%;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.pengumuman-form input:focus,
+.pengumuman-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 .pengumuman-form textarea {
@@ -54,99 +58,146 @@
 }
 
 .pengumuman-form button {
-  background-color: #6a1b9a;
-  color: white;
-  padding: 0.6rem;
+  padding: 12px;
+  background-color: #007bff;
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
   transition: background-color 0.2s ease;
 }
 
 .pengumuman-form button:hover {
-  background-color: #4a148c;
+  background-color: #0056b3;
 }
 
-.login-note {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.login-note a {
-  color: #6a1b9a;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.login-note a:hover {
-  text-decoration: underline;
-}
-
+/* Daftar Pengumuman */
 .pengumuman-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .pengumuman-item {
-  border: 1px solid #ddd;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
   background-color: #fafafa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 18px;
+  border-radius: 8px;
+  border-left: 5px solid #007bff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .pengumuman-item h4 {
-  margin: 0 0 0.5rem 0;
-  color: #4a148c;
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #333;
 }
 
-.pengumuman-item img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 0.5rem;
-  display: block;
+.pengumuman-item p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
 }
 
+.pengumuman-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pengumuman-link:hover {
+  color: #0056b3;
+}
+
+/* Tombol Edit dan Hapus */
 .pengumuman-item button {
-  background-color: #6a1b9a;
-  color: white;
+  margin-right: 10px;
+  margin-top: 12px;
+  padding: 8px 14px;
   border: none;
-  padding: 0.4rem 0.7rem;
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
 }
 
-.pengumuman-item button:hover {
-  background-color: #4a148c;
+.pengumuman-item button:first-of-type {
+  background-color: #ffc107;
+  color: #000;
+}
+.pengumuman-item button:first-of-type:hover {
+  background-color: #e0a800;
 }
 
-/* Responsive */
-@media screen and (max-width: 600px) {
-  .pengumuman-form,
-  .pengumuman-item {
-    padding: 0.8rem;
-  }
+.pengumuman-item button:last-of-type {
+  background-color: #dc3545;
+  color: #fff;
+}
+.pengumuman-item button:last-of-type:hover {
+  background-color: #b52a37;
+}
 
-  .pengumuman-form button,
-  .pengumuman-item button,
-  .logout-button {
-    width: 100%;
-    margin-right: 0;
-    margin-top: 0.5rem;
+/* Logout button */
+.logout-button {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  margin: 10px 0 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #565e64;
+}
+
+/* Info login */
+.login-note {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-note a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.login-note a:hover {
+  color: #0056b3;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .pengumuman-container {
+    padding: 16px;
   }
 
   .pengumuman-form input,
   .pengumuman-form textarea {
-    font-size: 0.95rem;
+    font-size: 14px;
   }
 
-  .pengumuman-container h2 {
-    font-size: 1.5rem;
+  .pengumuman-item h4 {
+    font-size: 18px;
+  }
+
+  .pengumuman-item p {
+    font-size: 14px;
+  }
+
+  .pengumuman-item button {
+    margin-top: 8px;
+    font-size: 13px;
+    padding: 6px 12px;
   }
 }
