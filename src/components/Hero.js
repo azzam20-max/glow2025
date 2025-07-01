@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { getData } from "country-list";
 import "./Hero.css";
 
 function Hero() {
@@ -28,7 +29,6 @@ function Hero() {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
 
@@ -55,17 +55,32 @@ function Hero() {
     );
   };
 
+  // Ambil semua negara, hilangkan duplikat & Israel
+  const countries = getData();
+  const uniqueCountries = Array.from(
+    new Map(
+      countries
+        .filter(
+          (c) => c.code !== "IL" && c.code !== "US" // Hapus Israel dan USA
+        ) // Hapus Israel
+        .map((c) => [c.code.toUpperCase(), c]) // Hindari duplikat
+    ).values()
+  ).sort((a, b) => a.name.localeCompare(b.name));
   return (
     <section className="hero" id="hero">
-      {/* Animasi bendera ASEAN */}
+      {/* 🔄 Animasi semua flag dunia otomatis */}
       <div className="flag-marquee">
         <div className="flag-wrapper">
-          <img src="/flags/id.png" alt="Indonesia" className="flag-item" />
-          <img src="/flags/my.png" alt="Malaysia" className="flag-item" />
-          <img src="/flags/sg.png" alt="Singapura" className="flag-item" />
-          <img src="/flags/th.png" alt="Thailand" className="flag-item" />
-          <img src="/flags/ph.png" alt="Filipina" className="flag-item" />
-          <img src="/flags/vn.png" alt="Vietnam" className="flag-item" />
+          {uniqueCountries.map((country, index) => (
+            <img
+              key={country.code}
+              src={`https://flagcdn.com/w80/${country.code.toLowerCase()}.png`}
+              alt={country.name}
+              className="flag-item"
+              style={{ animationDelay: `${index * 0.5}s`, left: "-60px" }}
+              loading="lazy"
+            />
+          ))}
         </div>
       </div>
 
