@@ -1,12 +1,10 @@
-/* Reset dasar */
-* {
-  margin: 0;
-  padding: 0;
+/* Scope seluruh style hanya ke halaman login */
+.login-page * {
   box-sizing: border-box;
 }
 
 /* Container Form */
-form {
+.login-page form {
   max-width: 400px;
   margin: 80px auto;
   padding: 32px;
@@ -17,7 +15,7 @@ form {
 }
 
 /* Judul */
-form h2 {
+.login-page form h2 {
   text-align: center;
   margin-bottom: 24px;
   font-size: 28px;
@@ -25,7 +23,7 @@ form h2 {
 }
 
 /* Input Styles */
-form input {
+.login-page form input {
   width: 100%;
   padding: 12px 16px;
   margin-bottom: 16px;
@@ -35,13 +33,13 @@ form input {
   transition: border-color 0.3s;
 }
 
-form input:focus {
+.login-page form input:focus {
   border-color: #7a1cac;
   outline: none;
 }
 
 /* Tombol Login */
-form button {
+.login-page form button {
   width: 100%;
   padding: 12px;
   background-color: #7a1cac;
@@ -54,13 +52,13 @@ form button {
   transition: background-color 0.3s ease;
 }
 
-form button:hover {
+.login-page form button:hover {
   background-color: #5d1289;
 }
 
 /* Responsif di layar kecil */
 @media (max-width: 480px) {
-  form {
+  .login-page form {
     margin: 40px 16px;
     padding: 24px;
   }
