@@ -64,7 +64,7 @@ function Hero() {
       <button
         className="notification-button-floating"
         onClick={() => navigate("/pengumuman")}
-        title="Lihat Pengumuman"
+        title="View Announcement"
       >
         <FaBell />
         <span className="notification-pulse"></span>
