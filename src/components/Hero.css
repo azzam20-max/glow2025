@@ -125,16 +125,26 @@ body {
 /* Tombol Lonceng Mengambang */
 .notification-button-floating {
   position: absolute;
-  top: 20px;
-  right: 24px;
+  top: 130px;
+  right: 44px;
   background-color: #fff8e1;
   border: none;
   border-radius: 50%;
-  padding: 16px;
+  padding: 15px;
   cursor: pointer;
-  z-index: 1100;
+  /* z-index: 1100; */
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.notification-text {
+  position: absolute;
+  top: 90px;
+  right: 13px;
+  padding: 16px;
+  /* z-index: 1000; */
+  color: #fdf9d9;
+  text-shadow: 0 0 8px #fdf9d9, 0 0 16px #fdf9d9, 0 0 24px #fdf9d9;
 }
 
 .notification-button-floating:hover {
@@ -288,6 +298,8 @@ body {
     0.05
   ); /* opsional: beri latar belakang tipis */
 }
+
+
 
 @keyframes scrollFlags {
   0% {

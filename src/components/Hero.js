@@ -69,6 +69,7 @@ function Hero() {
         <FaBell />
         <span className="notification-pulse"></span>
       </button>
+      <p className="notification-text">Announcement</p>
 
 
       {/* 🔄 Bendera */}
