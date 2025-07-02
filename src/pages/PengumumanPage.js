@@ -92,7 +92,7 @@ function PengumumanPage() {
     return (
       <div className="loader-container">
         <div className="loader"></div>
-        <p>Memuat pengumuman...</p>
+        <p>Loading...</p>
       </div>
     );
   }
