@@ -36,6 +36,11 @@ const speakers = [
     affiliation: "Universiti Tenaga Nasional (UNITEN), Malaysia",
     image: "/img/speakers/mohd.png",
   },
+  {
+    name: "Dr. Hanny Nasution",
+    affiliation: "Monash University, Australia",
+    image: "/img/speakers/hanny.png",
+  },
 ];
 
 const collaborators = [
