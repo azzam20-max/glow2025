@@ -1,4 +1,4 @@
-/* Optimized CSS untuk performa lebih baik */
+/* Optimized CSS untuk performa lebih baik - 6 Cards Layout */
 
 /* Navigation & Section Positioning - Optimized */
 #speakers,
@@ -8,9 +8,6 @@
 }
 
 #team-gallery,
-#testimonials {
-  padding-top: 90px;
-}
 
 /* Testimonials Section - Reduced complexity */
 #testimonials {
@@ -36,7 +33,6 @@
   display: inline-block;
   border-radius: 50%;
   border: 3px solid #ffa500;
-  /* Removed shadow untuk performa */
 }
 
 .testimonial img {
@@ -66,40 +62,38 @@
   margin-top: 4px;
 }
 
-/* Speakers Section - Optimized gradients and effects */
+/* Main Speakers Section Container - Optimized for 6 columns */
 .speakers-section {
-  background: linear-gradient(135deg, #1a237e, #0d47a1);
+  background: linear-gradient(135deg, #0f0f23, #1a1a3a);
   padding: 80px 0;
   min-height: 100vh;
   position: relative;
-  /* Removed overflow hidden untuk performa */
 }
 
 .speakers-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 32px;
 }
 
 .section-header {
   text-align: center;
   margin-bottom: 0;
-  padding: 70px;
+  padding: 60px 0 40px;
 }
 
 .section-header h2 {
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-bottom: 20px;
-  /* Simplified text shadow */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .section-divider {
   width: 80px;
   height: 4px;
-  background: #ffd700; /* Solid color instead of gradient */
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
   margin: 0 auto;
   border-radius: 2px;
 }
@@ -110,55 +104,223 @@
   gap: 60px;
 }
 
-.speakers-group {
-  margin-bottom: 0;
+/* International Speakers - Premium Elegant Style */
+.speakers-group:first-child {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.08),
+    rgba(138, 43, 226, 0.08)
+  );
+  border-radius: 24px;
+  padding: 50px 30px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.group-title {
+.speakers-group:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ff6b9d, #c44bd4);
+  border-radius: 24px 24px 0 0;
+}
+
+.speakers-group:first-child .group-title {
   color: #ffd700;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 30px;
-  font-weight: 600;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  letter-spacing: 1px;
 }
 
-.speakers-grid {
+/* Co-Lecturers - Modern Warm Style */
+.speakers-group:last-child {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.08),
+    rgba(155, 89, 182, 0.08)
+  );
+  border-radius: 24px;
+  padding: 50px 30px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(52, 152, 219, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.speakers-group:last-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #e74c3c, #f39c12);
+  border-radius: 24px 24px 0 0;
+}
+
+.speakers-group:last-child .group-title {
+  color: #3498db;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+  letter-spacing: 1px;
+}
+
+/* Unified Grid System - 6 Cards per Row */
+.speakers-group .speakers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(4, 3fr);
+  gap: 20px;
   padding: 20px 0;
 }
 
-/* Optimized Speaker Card */
-.speaker-card {
-  background: rgba(255, 255, 255, 0.1);
+/* International Speakers Cards */
+.speakers-group:first-child .speaker-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 215, 0, 0.08)
+  );
   border-radius: 16px;
-  /* Simplified backdrop filter */
-  backdrop-filter: blur(5px);
-  padding: 20px;
-  /* Reduced transition complexity */
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  backdrop-filter: blur(8px);
+  padding: 24px 16px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
-  /* Hardware acceleration */
-  will-change: transform;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.speaker-card:hover {
-  transform: translateY(-8px); /* Reduced movement */
-  background: rgba(255, 255, 255, 0.15);
-  /* Simplified shadow */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+.speakers-group:first-child .speaker-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.6s ease;
 }
 
-.speaker-image-container {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 20px;
+.speakers-group:first-child .speaker-card:hover::before {
+  left: 100%;
+}
+
+.speakers-group:first-child .speaker-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 215, 0, 0.12)
+  );
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.speakers-group:first-child .speaker-image-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px;
   position: relative;
   border-radius: 50%;
   padding: 3px;
-  /* Solid color instead of gradient */
-  background: #ffd700;
+  background: linear-gradient(135deg, #ffd700, #ff6b9d);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Co-Lecturers Cards */
+.speakers-group:last-child .speaker-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(52, 152, 219, 0.08)
+  );
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  padding: 24px 16px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  border: 1px solid rgba(52, 152, 219, 0.15);
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speakers-group:last-child .speaker-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #e74c3c);
+  transition: width 0.4s ease;
+}
+
+.speakers-group:last-child .speaker-card:hover::after {
+  width: 100%;
+}
+
+.speakers-group:last-child .speaker-card:hover {
+  transform: translateY(-6px) rotate(1deg);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(52, 152, 219, 0.12)
+  );
+  box-shadow: 0 10px 25px rgba(52, 152, 219, 0.2);
+  border-color: rgba(52, 152, 219, 0.3);
+}
+
+.speakers-group:last-child .speaker-image-container {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 16px;
+  position: relative;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, #3498db, #e74c3c);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Common Speaker Card Elements - Enhanced Text Colors */
+.speaker-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 8px;
 }
 
 .speaker-image {
@@ -166,24 +328,81 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ffffff;
-  /* Optimize image rendering */
+  border: 2px solid #ffffff;
   image-rendering: optimizeQuality;
 }
 
-.speaker-name {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.speaker-affiliation {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
+/* Enhanced Speaker Name Colors */
+.speakers-group:first-child .speaker-name {
+  color: #ffd700;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 10px;
   text-align: center;
   line-height: 1.4;
+  word-wrap: break-word;
+  hyphens: auto;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.speakers-group:last-child .speaker-name {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.4;
+  word-wrap: break-word;
+  hyphens: auto;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Enhanced Speaker Affiliation Colors */
+.speakers-group:first-child .speaker-affiliation {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  word-wrap: break-word;
+  hyphens: auto;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.speakers-group:last-child .speaker-affiliation {
+  color: #e8f4f9;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  word-wrap: break-word;
+  hyphens: auto;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design - Web Only */
+@media (max-width: 1400px) {
+  .speakers-group .speakers-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .speakers-group .speakers-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .speakers-group:first-child .speaker-name,
+  .speakers-group:last-child .speaker-name {
+    font-size: 1.25rem;
+  }
+
+  .speakers-group:first-child .speaker-affiliation,
+  .speakers-group:last-child .speaker-affiliation {
+    font-size: 1rem;
+  }
 }
 
 /* Responsive Design - Optimized */
@@ -194,73 +413,198 @@
   }
 
   .section-header {
-    padding: 40px;
+    padding: 40px 20px;
   }
 
   .section-header h2 {
     font-size: 2rem;
   }
 
-  .group-title {
-    font-size: 1.5rem;
+  .speakers-content {
+    gap: 60px;
   }
 
-  .speakers-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  .speakers-group:first-child,
+  .speakers-group:last-child {
+    padding: 40px 16px;
+    border-radius: 20px;
+  }
+
+  .speakers-group:first-child .group-title,
+  .speakers-group:last-child .group-title {
+    font-size: 1.9rem;
+    margin-bottom: 30px;
+  }
+
+  /* Grid 2 kolom untuk perangkat mobile */
+  .speakers-group:first-child .speakers-grid,
+  .speakers-group:last-child .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
+    padding: 16px 0;
   }
 
-  .speaker-image-container {
+  .speakers-group:first-child .speaker-card,
+  .speakers-group:last-child .speaker-card {
+    min-height: auto;
+    padding: 24px 16px;
+    border-radius: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .speakers-group:first-child .speaker-image-container {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 16px;
+  }
+
+  .speakers-group:last-child .speaker-image-container {
     width: 100px;
     height: 100px;
+    margin-bottom: 16px;
   }
 
-  .speaker-name {
+  /* Enhanced mobile text colors */
+  .speakers-group:first-child .speaker-name,
+  .speakers-group:last-child .speaker-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .speakers-group:first-child .speaker-affiliation,
+  .speakers-group:last-child .speaker-affiliation {
     font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
   }
 
-  .speaker-affiliation {
-    font-size: 0.8rem;
-  }
-
-  /* Disable animations on mobile for better performance */
-  .speaker-card {
-    animation: none;
+  .speaker-card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
   }
 }
 
-/* Optimized Float Animation - Reduced complexity */
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .speakers-container {
+    padding: 0 16px;
+  }
+
+  .section-header {
+    padding: 30px 16px;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .speakers-group:first-child,
+  .speakers-group:last-child {
+    padding: 30px 12px;
+  }
+
+  .speakers-group:first-child .group-title,
+  .speakers-group:last-child .group-title {
+    font-size: 1.6rem;
+  }
+
+  .speakers-group:first-child .speaker-card {
+    min-height: 260px;
+    padding: 24px 16px;
+  }
+
+  .speakers-group:last-child .speaker-card {
+    min-height: 220px;
+    padding: 20px 12px;
+  }
+
+  .speakers-group:first-child .speaker-name,
+  .speakers-group:last-child .speaker-name {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .speakers-group:first-child .speaker-affiliation,
+  .speakers-group:last-child .speaker-affiliation {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .speaker-card-inner {
+    padding: 0 8px;
+  }
+}
+
+/* Optimized Float Animation */
 @keyframes float {
   0%,
   100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-5px); /* Reduced movement */
+    transform: translateY(-6px);
   }
 }
 
-/* Apply animation only on larger screens and with reduced intensity */
+@keyframes gentle-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+  }
+}
+
+/* Apply animations only on larger screens */
 @media screen and (min-width: 769px) {
-  .speaker-card {
-    animation: float 4s ease-in-out infinite; /* Slower animation */
+  .speakers-group:first-child .speaker-card {
+    animation: float 6s ease-in-out infinite,
+      gentle-glow 4s ease-in-out infinite;
   }
 
-  /* Stagger animation for better performance */
-  .speaker-card:nth-child(even) {
-    animation-delay: 2s;
+  .speakers-group:first-child .speaker-card:nth-child(even) {
+    animation-delay: 3s, 2s;
+  }
+
+  .speakers-group:last-child .speaker-card {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .speakers-group:last-child .speaker-card:nth-child(odd) {
+    animation-delay: 2.5s;
+  }
+
+  .speakers-group:last-child .speakers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
   }
 }
 
 /* Performance optimizations */
 .speakers-section * {
-  /* Reduce repaints */
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Preload critical elements */
 .speaker-image {
-  /* Optimize image loading */
   loading: lazy;
+}
+
+.speakers-group,
+.group-title {
+  transition: all 0.3s ease;
 }
