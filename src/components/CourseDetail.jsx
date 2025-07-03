@@ -165,7 +165,7 @@ function CourseDetail() {
         <h3>{course.department}</h3>
 
         {course.schedules.map((schedule, index) => {
-          const mode = previewMode[index] || "image";
+          const mode = previewMode[index] || "excel"; // Default to excel mode
 
           return (
             <div className="course-sheet-preview" key={index}>
@@ -175,14 +175,14 @@ function CourseDetail() {
 
               {/* Tombol switch */}
               <div className="preview-toggle-buttons">
-                <button
+                {/* <button
                   onClick={() => togglePreview(index, "image")}
                   className={`toggle-button image ${
                     mode === "image" ? "active" : ""
                   }`}
                 >
                   🖼️ Preview Image
-                </button>
+                </button> */}
                 <button
                   onClick={() => togglePreview(index, "excel")}
                   className={`toggle-button excel ${
@@ -194,12 +194,12 @@ function CourseDetail() {
               </div>
 
               {/* Tampilan berdasarkan mode */}
-              {mode === "image" && schedule.imagePreview && (
+              {/* {mode === "image" && schedule.imagePreview && (
                 <img
                   src={schedule.imagePreview}
                   alt={`Preview for ${schedule.label}`}
                 />
-              )}
+              )} */}
 
               {mode === "excel" && (
                 <iframe
