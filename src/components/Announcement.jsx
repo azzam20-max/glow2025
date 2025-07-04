@@ -26,12 +26,12 @@ function Announcement() {
         </div>
 
         <a
-          href="https://www.canva.com/design/DAGpYLwbOlI/vydAXYOCXGZCyhPzrdM3OA/view?utm_content=DAGpYLwbOlI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h706e1cfe28"
+          href="https://www.canva.com/design/DAGpYLwbOlI/a-jJ5H7mYker4hNOQqBcNQ/edit?utm_content=DAGpYLwbOlI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
           target="_blank"
           rel="noopener noreferrer"
           className="announcement-button"
         >
-          📖 View Full Program Book
+          📖 Download Program Book
         </a>
       </div>
     </section>

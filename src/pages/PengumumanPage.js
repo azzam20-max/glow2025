@@ -138,7 +138,7 @@ function PengumumanPage() {
             {item.link && (
               <p>
                 <a href={item.link} target="_blank" rel="noopener noreferrer" className="pengumuman-link">
-                  🔗 Link
+                  🔗Open Link
                 </a>
               </p>
             )}
