@@ -1,5 +1,5 @@
-import React from 'react';
-import './Announcement.css';
+import React from "react";
+import "./Announcement.css";
 
 function Announcement() {
   return (
@@ -7,11 +7,13 @@ function Announcement() {
       <div className="announcement-container">
         <h2>📘 Program Book</h2>
         <p className="announcement-text">
-          Explore the full schedule, speakers, and essential information of GLOW 2025 in our official program book.
+          Explore the full schedule, speakers, and essential information of GLOW
+          2025 in our official program book.
         </p>
 
         <div className="announcement-warning">
-          <strong>⚠️ Attention:</strong> All participants are <u>required</u> to read the Program Book before attending the event.
+          <strong>⚠️ Attention:</strong> All participants are <u>required</u> to
+          read the Program Book before attending the event.
         </div>
 
         <div className="announcement-preview">
@@ -21,12 +23,12 @@ function Announcement() {
             width="100%"
             height="480"
             allowFullScreen
-            style={{ border: 'none', borderRadius: '8px', marginTop: '20px' }}
+            style={{ border: "none", borderRadius: "8px", marginTop: "20px" }}
           ></iframe>
         </div>
 
         <a
-          href="https://www.canva.com/design/DAGpYLwbOlI/a-jJ5H7mYker4hNOQqBcNQ/edit?utm_content=DAGpYLwbOlI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+          href="https://www.canva.com/design/DAGpYLwbOlI/a-jJ5H7mYker4hNOQqBcNQ/view?utm_content=DAGpYLwbOlI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
           target="_blank"
           rel="noopener noreferrer"
           className="announcement-button"
